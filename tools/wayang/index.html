@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="jv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pencarian Tokoh Wayang Lengkap - PAWARTA</title>
+    
+    <!-- Meta Tags & SEO -->
+    <meta name="description" content="Pencarian Tokoh Wayang Nusantara lengkap dengan gambar, deskripsi, karakter, silsilah, dan aksara jawa. Portal budaya Jawa PAWARTA.">
+    <meta name="keywords" content="wayang, tokoh wayang, pencarian wayang, pawarta, budaya jawa, aksara jawa, mahabarata, ramayana">
+    <link rel="canonical" href="https://pawarta.github.io/tools/wayang/index.html">
+    
+    <!-- Verification & Search Engine -->
+    <meta name="google-site-verification" content="IAcn_DcNzAkFuMAjiMDNMoUEMZV5oKau1XrJ4aDJlRc" />
+    <meta name="msvalidate.01" content="E9411F953448412F854C1FBA584B1383" />
+    <meta name="robots" content="index, follow">
+
+    <!-- Icons & Logos -->
+    <link rel="icon" href="https://pawarta.github.io/pawarta.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="https://pawarta.github.io/pawarta.ico" type="image/x-icon">
+    <link rel="icon" href="https://pawarta.github.io/pawarta.jpg" type="image/x-icon">
+    <link rel="shortcut icon" href="https://pawarta.github.io/pawarta.png" type="image/x-icon">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Pencarian Tokoh Wayang Lengkap - PAWARTA">
+    <meta property="og:description" content="Portal informasi dan pencarian tokoh wayang tradisi nusantara lengkap dengan aksara jawa dan galeri interaktif.">
+    <meta property="og:image" content="https://pawarta.github.io/img/wayang.png">
+    <meta property="og:url" content="https://pawarta.github.io/tools/wayang/index.html">
+    <meta property="og:type" content="website">
+
+    <!-- Alternate Languages & Links -->
+    <link rel="alternate" href="https://pawarta.github.io/" hreflang="x-default" />
+    <link rel="alternate" href="https://pawarta.github.io/" hreflang="id" />
+    <link rel="alternate" href="https://pawarta.github.io/en/" hreflang="en" />
+
+    <!-- Bootstrap 5 & Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <!-- Google AdSense & Analytics -->
+    <script async custom-element="amp-auto-ads" src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js"></script>
+    <script async crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9308517202792186"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GN5PGKKM3T"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-GN5PGKKM3T');
+    </script>
+
+    <style>
+        /* CSS Animated Rainbow Color Pelangi Background & Elements */
+        @keyframes rainbowBackground {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        @keyframes rainbowText {
+            0% { color: #ff0000; }
+            14% { color: #ff7f00; }
+            28% { color: #ffff00; }
+            42% { color: #00ff00; }
+            57% { color: #0000ff; }
+            71% { color: #4b0082; }
+            85% { color: #8b00ff; }
+            100% { color: #ff0000; }
+        }
+
+        .rainbow-header {
+            background: linear-gradient(270deg, #ff416c, #ff4b2b, #f7b733, #56ab2f, #a8ff78, #3b82f6, #8b5cf6);
+            background-size: 1400% 1400%;
+            animation: rainbowBackground 15s ease infinite;
+            color: white;
+        }
+
+        .rainbow-text-animated {
+            animation: rainbowText 8s infinite;
+            font-weight: bold;
+        }
+
+        /* General Styles & Nuansa Jawa */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #fcf8f2;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        .javanese-font {
+            font-family: 'Georgia', serif;
+            letter-spacing: 1px;
+        }
+
+        .honocoroko-title {
+            font-size: 1.5rem;
+            color: #d97706;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
+
+        /* Navbar Custom */
+        .navbar-brand img {
+            height: 40px;
+            width: 40px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 2px solid #fff;
+        }
+
+        /* Carousel / Responsive Slider */
+        .carousel-item img {
+            height: 400px;
+            object-fit: cover;
+            filter: brightness(85%);
+        }
+
+        .carousel-caption {
+            background: rgba(0, 0, 0, 0.6);
+            border-radius: 10px;
+            padding: 20px;
+        }
+
+        /* Wayang Card Styling */
+        .wayang-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: none;
+            border-radius: 12px;
+            overflow: hidden;
+            background: #fff;
+        }
+
+        .wayang-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+        }
+
+        .wayang-img {
+            height: 280px;
+            object-fit: contain;
+            background: #f8fafc;
+            padding: 15px;
+        }
+
+        /* Search Box Animation */
+        .search-box-wrapper {
+            background: linear-gradient(135deg, #fffbeb, #fef3c7);
+            border: 2px dashed #f59e0b;
+            border-radius: 15px;
+            padding: 30px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1e1b4b;
+            color: #cbd5e1;
+        }
+
+        footer a {
+            color: #facc15;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Rainbow Header Bar -->
+    <div class="rainbow-header py-2 text-center text-white font-monospace small">
+        <span>✨ ꦥꦮꦂꦠ - Portal Warta & Budaya Jawa Nusantara | Wisata Sastra & Karakter Wayang ✨</span>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="https://pawarta.github.io/index.html">
+                <img src="https://pawarta.github.io/pawarta.png" alt="Logo PAWARTA">
+                <span class="fw-bold tracking-wider">PAWARTA</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                awarta
+                <ul class="navbar-nav align-items-center gap-3">
+                    <li class="nav-item"><a class="nav-link active" href="https://pawarta.github.io/index.html">Ngajeng (Home)</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://pawarta.github.io/tools/wayang/index.html">Pencarian Wayang</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://pawarta.github.io/about.html">Bab Penulis</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://pawarta.github.io/contact.html">Hubungi Kami</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Responsive Animated Slider -->
+    <div id="wayangSlider" class="carousel slide shadow-lg" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#wayangSlider" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#wayangSlider" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#wayangSlider" data-bs-slide-to="2"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active animate__animated animate__fadeIn">
+                <img src="https://pawarta.github.io/img/wayang.png" class="d-block w-100" alt="Wayang Kulit Nusantara">
+                <div class="carousel-caption d-none d-md-block">
+                    <h3 class="rainbow-text-animated">Golekana Tokoh Wayang Favoritmu</h3>
+                    <p class="honocoroko-title">ꦏꦪꦸꦤꦤ꧀ ꦲꦶꦤꦸꦤ꧀ꦢꦂ ꦧꦸꦝꦪ</p>
+                    <p>Jelajahi silsilah, watak, dan ringkasan lakon pewayangan klasik dengan mudah dan lengkap.</p>
+                </div>
+            </div>
+            <div class="carousel-item animate__animated animate__fadeIn">
+                <img src="https://pawarta.github.io/pawarta bg.png" class="d-block w-100" alt="Luhurnya Budaya Jawa">
+                <div class="carousel-caption d-none d-md-block">
+                    <h3 class="rainbow-text-animated">Pusaka & Filsafat Jawa</h3>
+                    <p class="honocoroko-title">ꦩꦼꦩꦪꦸ​ꦲꦪꦸꦤing​ꦧꦸꦮꦤ</p>
+                    <p>Memahami nilai-nilai luhur moral dan etika hidup melalui filosofi tokoh pewayangan Mahabharata & Ramayana.</p>
+                </div>
+            </div>
+            <div class="carousel-item animate__animated animate__fadeIn">
+                <img src="https://pawarta.github.io/img/wayang.png" class="d-block w-100" alt="Khasanah Nusantara">
+                <div class="carousel-caption d-none d-md-block">
+                    <h3 class="rainbow-text-animated">Ensiklopedia Wayang Digital</h3>
+                    <p class="honocoroko-title">ꦱꦶꦤꦲꦸ​ꦧꦸꦝꦪ​ꦗꦮ</p>
+                    <p>Alat pencari modern terintegrasi dengan nuansa tradisional khas tanah Jawa.</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#wayangSlider" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#wayangSlider" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+
+    <!-- Main Search Tool Section -->
+    <main class="container my-5">
+        <div class="text-center mb-5 animate__animated animate__bounceIn">
+            <h1 class="fw-bold display-5 mb-2">PENCARIAN TOKOH WAYANG <span class="rainbow-text-animated">PAWARTA</span></h1>
+            <p class="honocoroko-title fs-3 mb-3">ꦥꦿꦻꦴꦏꦤ꧀ ꦥꦥꦂꦕꦪꦤ꧀ ꦠꦺꦴꦏꦺꦴꦃ ꦮꦪꦁ</p>
+            <p class="text-muted">Ketik jeneng tokoh wayang sing arep ko-goleki (Contoh: Puntadewa, Kresna, Arjuna, Semar)</p>
+        </div>
+
+        <!-- Search Form Container -->
+        <div class="search-box-wrapper shadow-lg mb-5">
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="input-group input-group-lg">
+                        <span class="input-group-text bg-warning text-dark border-0"><i class="bi bi-search"></i></span>
+                        <input type="text" id="searchInput" class="form-control border-0 shadow-none" placeholder="Golek jeneng wayang (Cth: Arjuna, Werkudara)..." onkeyup="searchWayang()">
+                        <button class="btn btn-dark px-4" type="button" onclick="resetSearch()">Reset</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Result Display Grid -->
+        <div class="row" id="wayangContainer">
+            <!-- Data Wayang akan dimuat secara dinamis via Javascript -->
+        </div>
+
+        <!-- Empty State Alert -->
+        <div id="noResult" class="text-center py-5 d-none">
+            <i class="bi bi-exclamation-circle display-1 text-warning"></i>
+            <h3 class="mt-3 text-secondary">Wah, Tokoh Wayang Sing Kok Goleki Ora Ketemu!</h3>
+            <p class="text-muted">Coba priksa maneh ejaan utawa jeneng sing di-ketik.</p>
+        </div>
+
+        <!-- Detailed Tutorial / Article Section -->
+        <section class="mt-5 p-4 p-md-5 bg-white rounded-4 shadow-sm border">
+            <h2 class="border-bottom pb-3 mb-4 text-primary fw-bold">📖 Serat Pengetahuan & Tutorial Mengenal Tokoh Wayang</h2>
+            <p class="lead">Wayang kulit minangka salah siji kabudayan asli Nusantara sing wis diakoni déning UNESCO minangka karya agung warisan kemanusiaan sing luhur. Liwat aplikasi <strong>PAWARTA Search Wayang</strong> iki, sinten mawon saged sinau babagan karakter, asal-usul, silsilah, ngantos filosofi urip saking para satriya, pandita, dewa, ngantos para punakawan.</p>
+            
+            <h3 class="h4 mt-4 text-dark">1. Filsafat lan Piwulang Luhur Wayang</h3>
+            <p>Saben tokoh wayang nduweni wewatakan (karakter) tartamtu sing dadi lambang utawa simbol sifat manungsa ing alam donya. Ana sing duwe watak satriya, asih, wicaksana, nanging ana uga sing asipat dursila utawa angkara murka. Kanthi sinau silsilah wayang, kita bisa mendhet saripati piwulang budi pekerti luhur.</p>
+
+            <h3 class="h4 mt-4 text-dark">2. Carane Nggunakake Piranti Pencarian (Tools Search)</h3>
+            <ul>
+                <li><strong>Ketik Jeneng:</strong> Lebokna jeneng tokoh ing kolom pados ing dhuwur, sistem bakal otomatis nyaring data kanthi cepet.</li>
+                <li><strong>Waca Katrangan Lengkap:</strong> Klik utawa gatekna katrangan watak, senjata pusaka, lan asal-usul negara/kahyangan saben tokoh.</li>
+                <li><strong>Nuansa Tradhisional:</strong> Kanthi nggabungake aksara Jawa lan desain pelangi dinamis, situs iki nggabungake teknologi modheren lan kearifan lokal.</li>
+            </ul>
+
+            <blockquote class="blockquote bg-light p-4 rounded border-start border-4 border-warning my-4">
+              <p class="mb-0 fst-italic">"Memayu hayuning bawana, ambrasta dur hangkara." — Sesanti urip supaya tansah njaga karesikan lan katentreman bumi sarta ngilangi sipat ala.</p>
+            </blockquote>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-white pt-5 pb-4 mt-5 border-top border-secondary">
+        <div class="container text-center text-md-start">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5 class="text-warning fw-bold mb-3">PAWARTA</h5>
+                    <p class="small text-muted">Portal informasi, alat digital budaya, lan warta nusantara kanthi dhasar kearifan lokal lan teknologi web mutakhir.</p>
+                    <p class="honocoroko-title text-warning small">ꦤꦒꦫꦶ ꦫꦲꦪꦸ ꦫꦲꦗꦺꦪ</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5 class="text-warning fw-bold mb-3">Pranala Penting</h5>
+                    <ul class="list-unstyled small">
+                        <li><a href="https://pawarta.github.io/index.html">Ngajeng (Home)</a></li>
+                        <li><a href="https://pawarta.github.io/about.html">Bab Penulis (About)</a></li>
+                        <li><a href="https://pawarta.github.io/contact.html">Kontak (Contact)</a></li>
+                        <li><a href="https://pawarta.github.io/disclaimer.html">Penyangkalan (Disclaimer)</a></li>
+                        <li><a href="https://pawarta.github.io/privacy.html">Kebijakan Privasi (Privacy)</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5 class="text-warning fw-bold mb-3">Legal & Sitemap</h5>
+                    <ul class="list-unstyled small">
+                        <li><a href="https://pawarta.github.io/terms.html">Syarat & Ketentuan (Terms)</a></li>
+                        <li><a href="https://pawarta.github.io/license.html">Lisensi (License)</a></li>
+                        <li><a href="https://pawarta.github.io/gdpr.html">Kepatuhan GDPR</a></li>
+                        <li><a href="https://pawarta.github.io/sitemap.html">Peta Situs (Sitemap)</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="border-secondary">
+            <div class="row align-items-center">
+                <div class="col-md-7 text-center text-md-start small text-muted">
+                    &copy; 2026 <strong>PAWARTA</strong> (Data Stream ID: 15353507854, Measurement ID: G-GN5PGKKM3T). All Rights Reserved.
+                </div>
+                <div class="col-md-5 text-center text-md-end">
+                    <span class="badge bg-warning text-dark">Aksara Jawa Integrated</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap Bundle JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JavaScript Database & Search Logic -->
+    <script>
+        const wayangData = [
+            {
+                nama: "Puntadewa (Yudhistira)",
+                honocoroko: "ꦥꦸꦤ꧀ꦠꦝꦺꦮ",
+                kategori: "Pandhawa Lima",
+                watak: "Sabar, narima, jujur, ora gepeng goroh, adil, lan suci batin.",
+                pusaka: "Jimat Kalimasada / Tombak Karawelang",
+                deskripsi: "Putra sulung Prabu Pandu Dewanata lan Dewi Kunti. Raja Ngamarta (Indraprahasta) sing kondhang minangka ratu sing ora duwe musuh sarta tansah milih dalan kabecikan.",
+                img: "https://pawarta.github.io/img/wayang.png"
+            },
+            {
+                nama: "Werkudara (Bima / Barkudara)",
+                honocoroko: "ꦮꦺꦂꦏꦸꦢꦫ",
+                kategori: "Pandhawa Lima",
+                watak: "Gagah perkasa, wani, jujur, satriya sejati, ora bisa krama madya nanging tresna marang sesama.",
+                pusaka: "Kuku Pancanaka, Gada Rujakpala",
+                deskripsi: "Putra nomer loro Pandu Dewanata. Satriya Jodipati sing nduweni kekuatan luar biasa, ngabdi tanpa wates marang ibu lan para sadulure.",
+                img: "https://pawarta.github.io/img/wayang.png"
+            },
+            {
+                nama: "Arjuna (Janaka / Parta)",
+                honocoroko: "ꦄꦂꦗꦸꦤ",
+                kategori: "Pandhawa Lima",
+                watak: "Gantheng, alus budi pekertine, ahli manah (panah), wicaksana, lan asring dadi tetungguling para satriya.",
+                pusaka: "Panah Pasopati, Panah Sarotama, Keris Kiai Kalandaru",
+                deskripsi: "Putra nomer telu Prabu Pandu lan Dewi Kunti. Satriya Madukara sing misuwur kesaktian lan ketangkasane ing madyaning paprangan Bharatayuda.",
+                img: "https://pawarta.github.io/img/wayang.png"
+            },
+            {
+                nama: "Nakula & Sadewa",
+                honocoroko: "ꦤꦏꦸꦭ ꦭꦤ꧀ ꦱꦝꦺꦮ",
+                kategori: "Pandhawa Lima",
+                watak: "Setia kawan, jujur, pinter nambani lelara (Sadewa), lan ahli tetanen/kuda (Nakula).",
+                pusaka: "Pedhang, Cundrik",
+                deskripsi: "Putra kembar pasangan Pandu lan Dewi Madrim. Satriya Bumi Retawu lan Sawojajar sing dadi panyengkuyung utami Pandhawa.",
+                img: "https://pawarta.github.io/img/wayang.png"
+            },
+            {
+                nama: "Semar Badranaya",
+                honocoroko: "ꦱꦼꦩꦂ",
+                kategori: "Punakawan",
+                watak: "Wicaksana, momong, asih marang kawula alit, pinisepuh para ksatria.",
+                pusaka: "Kuku Pancanaka (versi pewayangan luhur), Aji Pameling",
+                deskripsi: "Lurah Punakawan sing sejatine minangka dewa utusan (Batara Ismaya) sing milih turun marang marcapada kanggo momong para satriya sing nindakake bebener.",
+                img: "https://pawarta.github.io/img/wayang.png"
+            },
+            {
+                nama: "Kresna (Sri Kresna)",
+                honocoroko: "ꦱꦿꦶ ꦏꦿꦼꦱ꧀ꦤ",
+                kategori: "Dewa / Raja / Penasihat",
+                watak: "Wicaksana, pinter diplomasi, strategis perang sing ulung, penjelmaan Batara Wisnu.",
+                pusaka: "Cakra Sudarsana",
+                deskripsi: "Raja Dwarawati sing dadi kusir lan penasihat utami Pandhawa nalika perang Bharatayuda nglawan Kurawa.",
+                img: "https://pawarta.github.io/img/wayang.png"
+            }
+        ];
+
+        function displayWayang(data) {
+            const container = document.getElementById('wayangContainer');
+            const noResult = document.getElementById('noResult');
+            container.innerHTML = '';
+
+            if (data.length === 0) {
+                noResult.classList.remove('d-none');
+                return;
+            } else {
+                noResult.classList.add('d-none');
+            }
+
+            data.forEach(item => {
+                const cardHTML = `
+                    <div class="col-md-4 mb-4 animate__animated animate__fadeInUp">
+                        <div class="card wayang-card h-100 shadow-sm">
+                            <img src="${item.img}" class="wayang-img card-img-top" alt="${item.nama}">
+                            <div class="card-body d-flex flex-column">
+                                <span class="badge bg-warning text-dark align-self-start mb-2">${item.kategori}</span>
+                                <h3 class="h5 card-title fw-bold text-dark">${item.nama}</h3>
+                                <p class="honocoroko-title small mb-2">${item.honocoroko}</p>
+                                <p class="card-text text-muted small flex-grow-1">${item.deskripsi}</p>
+                                <hr class="text-muted my-2">
+                                <p class="small mb-1"><strong>Watak:</strong> ${item.watak}</p>
+                                <p class="small mb-3"><strong>Pusaka:</strong> ${item.pusaka}</p>
+                                <button class="btn btn-outline-primary btn-sm mt-auto" data-bs-toggle="modal" data-bs-target="#detailModal" onclick='showDetail(${JSON.stringify(item)})'>Waca Lengkap</button>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                container.innerHTML += cardHTML;
+            });
+        }
+
+        function searchWayang() {
+            const query = document.getElementById('searchInput').value.toLowerCase();
+            const filtered = wayangData.filter(item => 
+                item.nama.toLowerCase().includes(query) || 
+                item.kategori.toLowerCase().includes(query) || 
+                item.watak.toLowerCase().includes(query) ||
+                item.deskripsi.toLowerCase().includes(query)
+            );
+            displayWayang(filtered);
+        }
+
+        function resetSearch() {
+            document.getElementById('searchInput').value = '';
+            displayWayang(wayangData);
+        }
+
+        // Initial load
+        window.onload = function() {
+            displayWayang(wayangData);
+        };
+    </script>
+</body>
+</html>

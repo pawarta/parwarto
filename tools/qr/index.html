@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="jv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAWARTA - QR Code Generator & Online Tools Kanthi Nuansa Jawi</title>
+    
+    <!-- Meta Tags & Verification -->
+    <meta name="google-site-verification" content="IAcn_DcNzAkFuMAjiMDNMoUEMZV5oKau1XrJ4aDJlRc" />
+    <meta name="msvalidate.01" content="E9411F953448412F854C1FBA584B1383" />
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="Pawarta QR Generator Tools - Piranti pambikin QR Code online grathis kanthi gampang, cepet, lan dipadukan nuansa kabudayan Jawi sarta aksara Hanacaraka." />
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="PAWARTA - QR Code Generator & Online Tools" />
+    <meta property="og:description" content="Piranti digital mios saking Pawarta kanggo ndamel QR Code gratis kanthi nuansa tradisional Jawi." />
+    <meta property="og:image" content="https://pawarta.github.io/img/qr.png" />
+    <meta property="og:url" content="https://pawarta.github.io/tools/qr/index.html" />
+    <meta property="og:type" content="website" />
+
+    <!-- Icons -->
+    <link rel="icon" href="https://pawarta.github.io/pawarta.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="https://pawarta.github.io/pawarta.ico" type="image/x-icon">
+    <link rel="icon" href="https://pawarta.github.io/pawarta.jpg" type="image/x-icon">
+    <link rel="shortcut icon" href="https://pawarta.github.io/pawarta.png" type="image/x-icon">
+
+    <!-- Stylesheets -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    
+    <!-- Canonical & Hreflang -->
+    <link rel="canonical" href="https://pawarta.github.io/tools/qr/index.html">
+    <link rel="alternate" href="https://pawarta.github.io/" hreflang="x-default" />
+    <link rel="alternate" href="https://pawarta.github.io/" hreflang="id" />
+
+    <!-- AMP Auto Ads -->
+    <script async custom-element="amp-auto-ads" src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js"></script>
+
+    <!-- Google AdSense -->
+    <script async crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9308517202792186"></script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GN5PGKKM3T"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-GN5PGKKM3T');
+    </script>
+
+    <!-- QR Code Library CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+    <style>
+        /* Animated Rainbow Border & Header */
+        @keyframes rainbowFlow {
+            0% { border-color: #ff0000; background-position: 0% 50%; }
+            20% { border-color: #ff7f00; }
+            40% { border-color: #ffff00; }
+            60% { border-color: #00ff00; }
+            80% { border-color: #0000ff; }
+            100% { border-color: #8b00ff; background-position: 100% 50%; }
+        }
+
+        .rainbow-border {
+            border: 4px solid;
+            animation: rainbowFlow 6s infinite alternate;
+        }
+
+        .rainbow-text {
+            background: linear-gradient(45deg, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #8b00ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: bold;
+        }
+
+        body {
+            background-color: #fcf8f2;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #2c2c2c;
+            overflow-x: hidden;
+        }
+
+        /* Honocoroko Header Style */
+        .honocoroko-font {
+            font-family: 'Georgia', serif;
+            letter-spacing: 2px;
+            color: #8B4513;
+        }
+
+        /* Slider Container */
+        .slider-container {
+            position: relative;
+            width: 100%;
+            height: 350px;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+        }
+
+        .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .slide.active {
+            opacity: 1;
+        }
+
+        .slide-caption {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            background: rgba(0, 0, 0, 0.6);
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 8px;
+        }
+
+        /* QR Generator Box Style */
+        .qr-card {
+            border: 1px solid #e0d0c0;
+            background: #ffffff;
+            border-radius: 12px;
+        }
+
+        #qrcode canvas, #qrcode img {
+            margin: 0 auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        /* Animated Scroll indicator */
+        .scroll-indicator {
+            width: 30px;
+            height: 50px;
+            border: 2px solid #8B4513;
+            border-radius: 15px;
+            display: inline-block;
+            position: relative;
+        }
+        .scroll-indicator::before {
+            content: '';
+            width: 6px;
+            height: 10px;
+            background: #8B4513;
+            position: absolute;
+            top: 8px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 3px;
+            animation: scrollAnim 1.5s infinite;
+        }
+        @keyframes scrollAnim {
+            0% { top: 8px; opacity: 1; }
+            100% { top: 28px; opacity: 0; }
+        }
+
+        footer {
+            background-color: #3e2723;
+            color: #d7ccc8;
+        }
+
+        footer a {
+            color: #ffccbc;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="https://pawarta.github.io/index.html">
+                <img src="https://pawarta.github.io/pawarta.png" alt="Logo Pawarta" width="35" height="35" class="rounded-circle">
+                <span class="rainbow-text fs-4">PAWARTA TOOLS</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="https://pawarta.github.io/index.html">Utama</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://pawarta.github.io/about.html">Bab Indhata</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="https://pawarta.github.io/tools/qr/index.html">QR Generator</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://pawarta.github.io/contact.html">Kontak</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header / Banner Section -->
+    <header class="container my-4 text-center">
+        <div class="p-5 mb-4 bg-white rounded-3 shadow-sm rainbow-border">
+            <h1 class="display-5 fw-bold honocoroko-font mb-2">ꦥꦱꦤ꧀ꦝꦶꦔꦤ꧀​ꦲꦏ꧀ꦱꦫ​ꦗꦮ​ꦭꦤ꧀​ꦲꦶꦤ꧀ꦥꦺꦴ</h1>
+            <p class="honocoroko-font fs-6 text-muted mb-3">Ha Na Ca Ra Ka - Da Ta Sa Wa La - Pa Dha Ja Ya Nya - Ma Ga Ba Tho Nga</p>
+            <h2 class="text-secondary fs-4">QR Code Generator Online Gratis & Terlengkap</h2>
+            <p class="lead text-dark">Ndhamel kode QR (Quick Response) kagem tautan, teks, utawi profil digital kanthi gampang lan cepet.</p>
+            
+            <div class="mt-4">
+                <div class="scroll-indicator"></div>
+                <p class="small text-muted mt-1">Animated Scroll Down</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Responsive Slider Section -->
+    <section class="container mb-5">
+        <h3 class="fw-bold mb-3 border-start border-4 border-danger ps-2">Galeri & Informasi Pilihan (Slider)</h3>
+        <div class="slider-container rainbow-border">
+            <div class="slide active" style="background-image: url('https://pawarta.github.io/img/qr.png');">
+                <div class="slide-caption">
+                    <h5>Piranti QR Generator Online</h5>
+                    <p>Ubah teks utawi URL dados gambar QR Code kualitas tinggi secara instan.</p>
+                </div>
+            </div>
+            <div class="slide" style="background-image: url('https://pawarta.github.io/pawarta bg.png');">
+                <div class="slide-caption">
+                    <h5>Nuansa Kabudayan Jawi</h5>
+                    <p>Melestarikan aksara Nusantara di era digital modern.</p>
+                </div>
+            </div>
+            <div class="slide" style="background-image: url('https://pawarta.github.io/pawarta.jpg');">
+                <div class="slide-caption">
+                    <h5>Jaringan Informasi Luas</h5>
+                    <p>Terhubung langsung dengan beraneka ragam situs dan direktori dunia.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content: QR Generator Tool & Tutorial Article -->
+    <main class="container my-5">
+        <div class="row">
+            <!-- Left Column: Interactive QR Generator Tool -->
+            <div class="col-lg-7">
+                <div class="qr-card p-4 shadow-sm mb-4">
+                    <h3 class="fw-bold text-dark mb-3"><i class="bi bi-qr-code"></i> Damel QR Code Sapunika (Interactive QR Generator)</h3>
+                    <p class="text-muted">Lebokaken URL, Teks, utawi nomer telpon ing ngandhap menika kagem ngasilaken kode QR secara gratis.</p>
+                    
+                    <div class="mb-3">
+                        <label for="qrInputText" class="form-label fw-semibold">Teks / URL / Aliran Data:</label>
+                        <div class="input-group">
+                            <input type="text" id="qrInputText" class="form-control form-control-lg" placeholder="Contoh: https://pawarta.github.io" value="https://pawarta.github.io">
+                            <button class="btn btn-danger px-4" type="button" onclick="generateQRCode()"><i class="bi bi-magic"></i> Damel QR</button>
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label for="qrSize" class="form-label small fw-semibold">Ukuran QR (Pixel):</label>
+                            <select id="qrSize" class="form-select" onchange="generateQRCode()">
+                                <option value="150">150 x 150 px</option>
+                                <option value="200" selected>200 x 200 px</option>
+                                <option value="250">250 x 250 px</option>
+                                <option value="300">300 x 300 px</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="text-center bg-light p-4 rounded-3 border mt-3">
+                        <h5 class="text-secondary mb-3">Asil Gambar Kode QR Panjenengan:</h5>
+                        <div id="qrcode" class="d-flex justify-content-center mb-3"></div>
+                        <div id="downloadArea" style="display: none;" class="mt-3">
+                            <button id="downloadBtn" class="btn btn-success" onclick="downloadQRCode()"><i class="bi bi-download"></i> Unduh Gambar QR (PNG)</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column: Sitemap / Sidebar Menu -->
+            <div class="col-lg-5">
+                <div class="bg-white p-4 rounded-3 shadow-sm mb-4">
+                    <h4 class="fw-bold mb-3 border-bottom pb-2">Pranala Penting (Sitemap)</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="https://pawarta.github.io/index.html" class="text-decoration-none text-dark"><i class="bi bi-chevron-right text-danger"></i> Halaman Utama</a></li>
+                        <li class="mb-2"><a href="https://pawarta.github.io/about.html" class="text-decoration-none text-dark"><i class="bi bi-chevron-right text-danger"></i> Bab Indhata (About)</a></li>
+                        <li class="mb-2"><a href="https://pawarta.github.io/contact.html" class="text-decoration-none text-dark"><i class="bi bi-chevron-right text-danger"></i> Kontak Kami</a></li>
+                        <li class="mb-2"><a href="https://pawarta.github.io/privacy.html" class="text-decoration-none text-dark"><i class="bi bi-chevron-right text-danger"></i> Kebijakan Privasi</a></li>
+                        <li class="mb-2"><a href="https://pawarta.github.io/terms.html" class="text-decoration-none text-dark"><i class="bi bi-chevron-right text-danger"></i> Syarat & Ketentuan</a></li>
+                        <li class="mb-2"><a href="https://pawarta.github.io/sitemap.html" class="text-decoration-none text-dark"><i class="bi bi-chevron-right text-danger"></i> Peta Situs (Sitemap)</a></li>
+                    </ul>
+                </div>
+
+                <!-- Google AdSense Placeholder Box -->
+                <div class="bg-light p-3 rounded-3 text-center border mb-4">
+                    <span class="text-muted small">Iklan / Sponsored Content</span>
+                    <div class="my-3">
+                        <ins class="adsbygoogle"
+                             style="display:block"
+                             data-ad-client="ca-pub-9308517202792186"
+                             data-ad-slot="auto"
+                             data-ad-format="auto"
+                             data-full-width-responsive="true"></ins>
+                        <script>
+                             (adsbygoogle = window.adsbygoogle || []).push({});
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Long Tutorial Article Section -->
+        <div class="row mt-4">
+            <div class="col-12">
+                <article class="bg-white p-4 rounded-3 shadow-sm">
+                    <h2 class="fw-bold mb-3 text-danger">Tutorial Lengkap: Tata Cara Nggawe Lan Nggunakaken QR Code Online ing Pawarta</h2>
+                    <p class="text-muted">Diterbitkan oleh Redaksi Pawarta • Kategori: Panduan Teknologi & Kebudayaan</p>
+                    <hr>
+                    <p>Teknologi <em>Quick Response (QR) Code</em> saiki wis dadi bagean penting saka urip saben dina. Mulai saka pembayaran digital, menu restoran, nganti nuduhake alamat situs web, kabeh nggunakake kode bar rong dimensi iki. Lumantar platform <strong>Pawarta</strong>, kita nyedhiyakake piranti khusus (QR Generator Tool) supaya saben wong bisa nggawe kode QR kanthi gratis lan gampang.</p>
+                    
+                    <h4 class="mt-4">Langkah-Langkah Nggawe QR Code:</h4>
+                    <ol class="mb-4">
+                        <li><strong>Lebokake Teks utawa Tautan (URL):</strong> Ketik alamat web utawa pesen sing pengin diowahi dadi kode QR ing kolom input sing wis disedhiyakake.</li>
+                        <li><strong>Pilih Ukuran Gambar:</strong> Tentukan ukuran piksel sing dikarepake (contone 200x200 px) supaya pas karo kabutuhan cetak utawa digital.</li>
+                        <li><strong>Klik Tombol "Damel QR":</strong> Sistem bakal otomatis ngasilake gambar kode QR ing layar sajrone sawetara detik.</li>
+                        <li><strong>Unduh Gambar:</strong> Gunakake tombol unduh format PNG kanggo nyimpen gambar menyang piranti (smartphone utawa komputer) panjenengan.</li>
+                    </ol>
+
+                    <h4 class="mt-4">Filosofi Tradisi lan Teknologi Modern</h4>
+                    <p>Kanthi nggabungake unsur estetika aksara Hanacaraka lan desain warna pelangi (Rainbow CSS Animated), Pawarta duwe pangarep-arep supaya masyarakat tetep tresna marang kabudayan Jawa nalika nggunakake teknologi digital modhel saiki. Mugi-mugi pandhuan lan piranti menika migunani tumrap para pamaos sedaya.</p>
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-white py-4 mt-5">
+        <div class="container text-center">
+            <p class="mb-1">&copy; 2026 PAWARTA - All Rights Reserved. Aliran Data ID: 15353507854 (G-GN5PGKKM3T)</p>
+            <p class="small text-muted honocoroko-font mb-0">ꦫꦲꦪꦸ​ꦫꦲꦪꦸ​ꦫꦲꦪꦸ​ꦱꦩꦶ</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript Slider & QR Generator Logic -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Responsive Slider Script
+        let slides = document.querySelectorAll('.slide');
+        let currentSlide = 0;
+
+        function nextSlide() {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].classList.add('active');
+        }
+
+        setInterval(nextSlide, 4000);
+
+        // QR Code Generator Logic using qrcode.js
+        let qrInstance = null;
+
+        function generateQRCode() {
+            let textInput = document.getElementById('qrInputText').value.trim();
+            let sizeVal = parseInt(document.getElementById('qrSize').value);
+            let qrContainer = document.getElementById('qrcode');
+            let downloadArea = document.getElementById('downloadArea');
+
+            if (!textInput) {
+                alert("Mangga lebokaken teks utawi URL rumiyin!");
+                return;
+            }
+
+            // Clear previous QR
+            qrContainer.innerHTML = "";
+
+            // Generate new QR Code
+            qrInstance = new QRCode(qrContainer, {
+                text: textInput,
+                width: sizeVal,
+                height: sizeVal,
+                colorDark: "#000000",
+                colorLight: "#ffffff",
+                correctLevel: QRCode.CorrectLevel.H
+            });
+
+            // Show download button area after short timeout to let render finish
+            setTimeout(() => {
+                downloadArea.style.display = "block";
+            }, 300);
+        }
+
+        // Initial generator run on page load
+        window.onload = function() {
+            generateQRCode();
+        };
+
+        function downloadQRCode() {
+            let qrImage = document.querySelector('#qrcode img') || document.querySelector('#qrcode canvas');
+            if (!qrImage) {
+                alert("Durung ana kode QR sing kagawe!");
+                return;
+            }
+
+            let imageUrl = "";
+            if (qrImage.tagName.toLowerCase() === 'canvas') {
+                imageUrl = qrImage.toDataURL("image/png");
+            } else {
+                imageUrl = qrImage.src;
+            }
+
+            let link = document.createElement('a');
+            link.href = imageUrl;
+            link.download = 'pawarta-qrcode.png';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAWARTA - Портал яванских новостей и современной культуры</title>
+    
+    <!-- Meta SEO & Verification -->
+    <meta name="description" content="Pawarta — это цифровой портал новостей, современных технологий и сохранения яванской культуры и письма хонокороко в цифровую эпоху.">
+    <meta name="keywords" content="pawarta, яванские новости, хонокороко, яванский алфавит, портал новостей, яванская культура">
+    <meta name="robots" content="index, follow">
+    <meta name="google-site-verification" content="IAcn_DcNzAkFuMAjiMDNMoUEMZV5oKau1XrJ4aDJlRc">
+    <meta name="msvalidate.01" content="E9411F953448412F854C1FBA584B1383">
+
+    <!-- Open Graph / Social Media Meta -->
+    <meta property="og:title" content="PAWARTA - Портал яванских новостей и культуры">
+    <meta property="og:description" content="Центр цифровых новостей и культуры в современном яванском стиле.">
+    <meta property="og:image" content="https://pawarta.github.io/pawarta.jpg">
+    <meta property="og:url" content="https://pawarta.github.io/ru/">
+    <meta property="og:type" content="website">
+
+    <!-- Favicon & Icons -->
+    <link rel="icon" href="https://pawarta.github.io/pawarta.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="https://pawarta.github.io/pawarta.ico" type="image/x-icon">
+    <link rel="icon" href="https://pawarta.github.io/pawarta.jpg" type="image/x-icon">
+    <link rel="shortcut icon" href="https://pawarta.github.io/pawarta.png" type="image/x-icon">
+
+    <!-- Canonical & Hreflang Links -->
+    <link rel="canonical" href="https://pawarta.github.io/ru/">
+    <link rel="alternate" href="https://pawarta.github.io/ru/" hreflang="ru">
+    <link rel="alternate" href="https://pawarta.github.io/en/" hreflang="en">
+    <link rel="alternate" href="https://pawarta.github.io/es/" hreflang="es">
+    <link rel="alternate" href="https://pawarta.github.io/fr/" hreflang="fr">
+    <link rel="alternate" href="https://pawarta.github.io/de/" hreflang="de">
+    <link rel="alternate" href="https://pawarta.github.io/th/" hreflang="th">
+    <link rel="alternate" href="https://pawarta.github.io/id/" hreflang="id">
+    <link rel="alternate" href="https://pawarta.github.io/" hreflang="x-default">
+
+    <!-- Stylesheets (Bootstrap 5, Icons, Animate.css) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- AMP Auto Ads -->
+    <script async custom-element="amp-auto-ads" src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js"></script>
+
+    <!-- Google AdSense -->
+    <script async crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9308517202792186"></script>
+
+    <!-- Google tag (gtag.js) - GA4 ID: G-GN5PGKKM3T -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GN5PGKKM3T"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-GN5PGKKM3T');
+    </script>
+
+    <!-- Custom CSS -->
+    <style>
+        :root {
+            --primary-jawa: #2c1d0c;
+            --accent-gold: #d4af37;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #fcf8f2;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        @keyframes rainbowGlow {
+            0% { color: #ff0000; }
+            14% { color: #ff7f00; }
+            28% { color: #ffff00; }
+            42% { color: #00ff00; }
+            57% { color: #0000ff; }
+            71% { color: #4b0082; }
+            85% { color: #9400d3; }
+            100% { color: #ff0000; }
+        }
+
+        @keyframes rainbowBg {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .rainbow-text {
+            animation: rainbowGlow 6s infinite linear;
+            font-weight: bold;
+        }
+
+        .rainbow-badge {
+            background: linear-gradient(270deg, #ff416c, #ff4b2b, #f12711, #f5af19, #00b09b, #96c93d);
+            background-size: 400% 400%;
+            animation: rainbowBg 10s ease infinite;
+            color: white;
+        }
+
+        .navbar-brand img {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            border: 2px solid var(--accent-gold);
+        }
+
+        .carousel-item {
+            height: 550px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .carousel-overlay {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.55);
+        }
+
+        .carousel-caption {
+            bottom: 20%;
+        }
+
+        .honocoroko-title {
+            font-size: 2.5rem;
+            letter-spacing: 2px;
+            color: var(--accent-gold);
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+        }
+
+        footer {
+            background-color: var(--primary-jawa);
+            color: #d1c7bd;
+        }
+
+        footer a {
+            color: #d4af37;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: #fff;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="https://pawarta.github.io/" target="_blank" rel="noopener noreferrer">
+                <img src="https://pawarta.github.io/pawarta.jpg" alt="Логотип Pawarta">
+                <div>
+                    <span class="rainbow-text fs-4">PAWARTA</span>
+                    <div style="font-size: 10px; color: #d4af37;">ꦥꦮꦂꦠ - Яванский портал (RU)</div>
+                </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav align-items-center gap-3">
+                    <li class="nav-item"><a class="nav-link active" href="https://pawarta.github.io/ru/" target="_blank" rel="noopener noreferrer">Главная</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://pawarta.github.io/about.html" target="_blank" rel="noopener noreferrer">О нас</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://pawarta.github.io/sitemap.html" target="_blank" rel="noopener noreferrer">Карта сайта</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://pawarta.github.io/contact.html" target="_blank" rel="noopener noreferrer">Контакты</a></li>
+                    <li class="nav-item">
+                        <a href="https://pawarta.github.io/choices.html" target="_blank" rel="noopener noreferrer" class="btn btn-sm rainbow-badge px-3 py-1">Выбор новостей</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Responsive Slider Section -->
+    <div id="pawartaSlider" class="carousel slide carousel-fade shadow" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#pawartaSlider" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#pawartaSlider" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#pawartaSlider" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <!-- Slide 1 -->
+            <div class="carousel-item active" style="background-image: url('https://pawarta.github.io/img/bahasa-jawa.jpeg');">
+                <div class="carousel-overlay"></div>
+                <div class="carousel-caption text-center animate__animated animate__fadeInDown">
+                    <h2 class="honocoroko-title">ꦲꦏ꧀ꦱꦫꦗꦮꦭꦸꦩꦶꦤꦲꦶꦤꦫ</h2>
+                    <h1 class="display-4 fw-bold text-white mb-3">Добро пожаловать в <span class="rainbow-text">PAWARTA</span></h1>
+                    <p class="lead text-light">Современный центр цифровых новостей на основе яванской культуры и мудрости.</p>
+                    <a href="#artikels" class="btn btn-warning btn-lg fw-bold mt-2 shadow">Читать новости</a>
+                </div>
+            </div>
+            <!-- Slide 2 -->
+            <div class="carousel-item" style="background-image: url('https://pawarta.github.io/img/ai.jpeg');">
+                <div class="carousel-overlay"></div>
+                <div class="carousel-caption text-center animate__animated animate__fadeInDown">
+                    <h2 class="honocoroko-title">ꦠꦼꦏ꧀ꦤꦺꦴꦭꦺꦴꦒꦶꦭꦤ꧀ꦄꦆ</h2>
+                    <h1 class="display-4 fw-bold text-white mb-3">Цифровая трансформация и ИИ</h1>
+                    <p class="lead text-light">Соединение великих традиций с искусственным интеллектом (ИИ) и технологиями будущего.</p>
+                    <a href="https://pawarta.github.io/tools/ai/index.html" target="_blank" rel="noopener noreferrer" class="btn btn-outline-light btn-lg fw-bold mt-2">Изучить ИИ</a>
+                </div>
+            </div>
+            <!-- Slide 3 -->
+            <div class="carousel-item" style="background-image: url('https://pawarta.github.io/img/3d.jpeg');">
+                <div class="carousel-overlay"></div>
+                <div class="carousel-caption text-center animate__animated animate__fadeInDown">
+                    <h2 class="honocoroko-title">ꦏꦧꦸꦢꦪꦤ꧀ꦤꦸꦱꦤ꧀ꦠꦫ</h2>
+                    <h1 class="display-4 fw-bold text-white mb-3">3D-искусство и визуализация</h1>
+                    <p class="lead text-light">Исследование современной цифровой визуальной эстетики с оттенком культуры Нусантары.</p>
+                    <a href="https://pawarta.github.io/tools/3d/index.html" target="_blank" rel="noopener noreferrer" class="btn btn-warning btn-lg fw-bold mt-2 shadow">Подробнее</a>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#pawartaSlider" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Назад</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#pawartaSlider" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Вперед</span>
+        </button>
+    </div>
+
+    <!-- Main Content & Long Article Section -->
+    <main id="artikels" class="container my-5">
+        <div class="row">
+            <!-- Article Content Area -->
+            <div class="col-lg-8" data-aos="fade-up">
+                <article class="bg-white p-4 p-md-5 rounded-4 shadow-sm border">
+                    <div class="mb-3">
+                        <span class="badge rainbow-badge px-3 py-2">Главная / Специальный репортаж</span>
+                        <span class="text-muted ms-2"><i class="bi bi-calendar3"></i> 30 июля 2026</span>
+                    </div>
+                    
+                    <h1 class="fw-bold mb-4 text-dark">Сохранение яванской культуры и письма Хонокороко в эпоху глобальной цифровой трансформации</h1>
+                    
+                    <div class="p-3 mb-4 bg-light border-start border-4 border-warning rounded fst-italic">
+                        "ꦲꦤꦕꦫꦏ꧈ ꦢꦠꦱꦮꦭ꧈ ꦥꦝꦗꦪꦚꦚ꧈ ꦩꦒꦧꦛꦔꦤ꧈ как благородное литературное наследие, которое является символом цивилизации нации."
+                    </div>
+
+                    <p class="lead">В современную эпоху, отмеченную волной глобализации и стремительных технологий, существование местной культуры и региональных языков сталкивается с серьезными проблемами. <strong>PAWARTA</strong> выступает в качестве реального проявления преданности делу объединения местной мудрости с современным цифровым прогрессом.</p>
+
+                    <h3 class="mt-4 fw-bold text-secondary">Важность сохранения яванского письма</h3>
+                    <p>Яванское письмо, более известное как <em>Хонокороко</em>, — это не просто традиционный инструмент письма, оно также содержит глубокие философские ценности жизни о гармонии между человеком, природой и Творцом. Благодаря таким цифровым платформам, как Pawarta.github.io, современное молодое поколение имеет более легкий доступ к обучению, чтению и развитию яванского письма с помощью гаджетов, компьютеров и приложений на базе искусственного интеллекта (ИИ).</p>
+
+                    <div class="row my-4">
+                        <div class="col-md-6 mb-3" data-aos="zoom-in">
+                            <a href="https://pawarta.github.io/tools/ai/index.html" target="_blank" rel="noopener noreferrer">
+                                <img src="https://pawarta.github.io/img/ai.jpeg" class="img-fluid rounded shadow-sm" alt="ИИ и Культура">
+                            </a>
+                        </div>
+                        <div class="col-md-6 mb-3" data-aos="zoom-in">
+                            <a href="https://pawarta.github.io/tools/calendar/index.html" target="_blank" rel="noopener noreferrer">
+                                <img src="https://pawarta.github.io/img/calendar.jpeg" class="img-fluid rounded shadow-sm" alt="Яванский календарь">
+                            </a>
+                        </div>
+                    </div>
+
+                    <h3 class="mt-4 fw-bold text-secondary">Роль ИИ и социальных сетей в новостной журналистике</h3>
+                    <p>Журналистика в эпоху ИИ требует скорости, точности и широкого охвата. Pawarta использует передовые технологии, включая интеграцию аналитики, такой как Google Analytics (G-GN5PGKKM3T), и оптимизацию AdSense, чтобы распространяемая информация была не только привлекательной, но и соответствовала мировым стандартам. Благодаря различным интерактивным функциям, таким как голосовой переводчик, преобразование текста в речь (TTS) и сканер QR-кодов, читатели могут испытать совершенно новый опыт слежения за последними новостями.</p>
+
+                    <h3 class="mt-4 fw-bold text-secondary">Видение и миссия Pawarta</h3>
+                    <ul class="list-group list-group-flush mb-4">
+                        <li class="list-group-item"><i class="bi bi-check-circle-fill text-success me-2"></i> Предоставление точной, объективной и надежной информации и новостей.</li>
+                        <li class="list-group-item"><i class="bi bi-check-circle-fill text-success me-2"></i> Сохранение письма Хонокороко и яванской литературы на цифровых платформах.</li>
+                        <li class="list-group-item"><i class="bi bi-check-circle-fill text-success me-2"></i> Развитие интеллектуального цифрового сообщества, чуткого к технологии ИИ.</li>
+                    </ul>
+
+                    <p>Работая вместе и поддерживая местные платформы, мы все несем моральную ответственность за то, чтобы яванская культура не исчезла под влиянием времени, а продолжала процветать и становиться известной на международной арене.</p>
+
+                </article>
+            </div>
+
+            <!-- Sidebar Area -->
+            <div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-left">
+                <!-- Widget Kategori / Fitur -->
+                <div class="card shadow-sm border-0 mb-4 rounded-4">
+                    <div class="card-header rainbow-badge text-white fw-bold">
+                        <i class="bi bi-star-fill"></i> Галерея функций и услуг
+                    </div>
+                    <div class="card-body">
+                        <div class="row g-2">
+                            <div class="col-6 text-center p-2 border rounded">
+                                <a href="https://pawarta.github.io/tools/voice/index.html" target="_blank" rel="noopener noreferrer" class="text-decoration-none text-dark">
+                                    <img src="https://pawarta.github.io/img/voice.png" style="width: 40px; height: 40px;" alt="Voice">
+                                    <div class="small fw-bold mt-1">Voice TTS</div>
+                                </a>
+                            </div>
+                            <div class="col-6 text-center p-2 border rounded">
+                                <a href="https://pawarta.github.io/tools/ai/index.html" target="_blank" rel="noopener noreferrer" class="text-decoration-none text-dark">
+                                    <img src="https://pawarta.github.io/img/ai.jpeg" style="width: 40px; height: 40px; object-fit: cover;" alt="AI">
+                                    <div class="small fw-bold mt-1">Smart AI</div>
+                                </a>
+                            </div>
+                            <div class="col-6 text-center p-2 border rounded">
+                                <a href="https://pawarta.github.io/tools/quran/index.html" target="_blank" rel="noopener noreferrer" class="text-decoration-none text-dark">
+                                    <img src="https://pawarta.github.io/img/quran.png" style="width: 40px; height: 40px;" alt="Quran">
+                                    <div class="small fw-bold mt-1">Религия</div>
+                                </a>
+                            </div>
+                            <div class="col-6 text-center p-2 border rounded">
+                                <a href="https://pawarta.github.io/tools/qr/index.html" target="_blank" rel="noopener noreferrer" class="text-decoration-none text-dark">
+                                    <img src="https://pawarta.github.io/img/qr.png" style="width: 40px; height: 40px;" alt="QR">
+                                    <div class="small fw-bold mt-1">QR Сканер</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Widget Iklan / AdSense Placeholder -->
+                <div class="card shadow-sm border-0 mb-4 rounded-4 text-center p-3 bg-light">
+                    <div class="small text-muted mb-2">--- Рекламный блок / Google AdSense ---</div>
+                    <ins class="adsbygoogle"
+                         style="display:block"
+                         data-ad-client="ca-pub-9308517202792186"
+                         data-ad-slot="auto"
+                         data-ad-format="auto"
+                         data-full-width-responsive="true"></ins>
+                    <script>
+                         (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
+
+                <!-- Navigasi kaca pendukung & Tools -->
+                <div class="card shadow-sm border-0 rounded-4 mb-4">
+                    <div class="card-header bg-dark text-white fw-bold">
+                        <i class="bi bi-link-45deg"></i> Полезные ссылки
+                    </div>
+                    <div class="list-group list-group-flush rounded-bottom">
+                        <a href="https://pawarta.github.io/" target="_blank" rel="noopener noreferrer" class="list-group-item list-group-item-action">Главный портал (Home)</a>
+                        <a href="https://pawarta.github.io/about.html" target="_blank" rel="noopener noreferrer" class="list-group-item list-group-item-action">О нас (About)</a>
+                        <a href="https://pawarta.github.io/contact.html" target="_blank" rel="noopener noreferrer" class="list-group-item list-group-item-action">Связаться с нами (Contact)</a>
+                        <a href="https://pawarta.github.io/privacy.html" target="_blank" rel="noopener noreferrer" class="list-group-item list-group-item-action">Политика конфиденциальности</a>
+                        <a href="https://pawarta.github.io/terms.html" target="_blank" rel="noopener noreferrer" class="list-group-item list-group-item-action">Условия использования</a>
+                        <a href="https://pawarta.github.io/disclaimer.html" target="_blank" rel="noopener noreferrer" class="list-group-item list-group-item-action">Отказ от ответственности</a>
+                        <a href="https://pawarta.github.io/license.html" target="_blank" rel="noopener noreferrer" class="list-group-item list-group-item-action">Лицензия (License)</a>
+                        <a href="https://pawarta.github.io/LICENSE" target="_blank" rel="noopener noreferrer" class="list-group-item list-group-item-action">Файл LICENSE</a>
+                        <a href="https://pawarta.github.io/gdpr.html" target="_blank" rel="noopener noreferrer" class="list-group-item list-group-item-action">Соответствие GDPR</a>
+                        <a href="https://pawarta.github.io/choices.html" target="_blank" rel="noopener noreferrer" class="list-group-item list-group-item-action">Выбор пользователя</a>
+                        <a href="https://pawarta.github.io/sitemap.html" target="_blank" rel="noopener noreferrer" class="list-group-item list-group-item-action">Карта сайта</a>
+                    </div>
+                </div>
+
+                <!-- Tools & Utilities -->
+                <div class="card shadow-sm border-0 rounded-4">
+                    <div class="card-header rainbow-badge text-white fw-bold">
+                        <i class="bi bi-tools"></i> Инструменты и сервисы
+                    </div>
+                    <div class="list-group list-group-flush rounded-bottom small">
+                        <a href="https://pawarta.github.io/tools/3d/index.html" target="_blank" rel="noopener noreferrer" class="list-group-item list-group-item-action">3D Просмотрщик</a>
+                        <a href="https://pawarta.github.io/tools/IP/index.html" target="_blank" rel="noopener noreferrer" class="list-group-item list-group-item-action">Поиск IP</a>
+                        <a href="https://pawarta.github.io/tools/ai/index.html" target="_blank" rel="noopener noreferrer" class="list-group-item list-group-item-action">ИИ Помощник</a>
+                        <a href="https://pawarta.github.io/tools/bahasa-jawa/index.html" target="_blank" rel="noopener noreferrer" class="list-group-item list-group-item-action">Переводчик с яванского</a>
+                        <a href="https://pawarta.github.io/tools/calendar/index.html" target="_blank" rel="noopener noreferrer" class="list-group-item list-group-item-action">Яванский календарь / Вэтон</a>
+                        <a href="https://pawarta.github.io/tools/macapat/index.html" target="_blank" rel="noopener noreferrer" class="list-group-item list-group-item-action">Песни Макапат</a>
+                        <a href="https://pawarta.github.io/tools/maps/index.html" target="_blank" rel="noopener noreferrer" class="list-group-item list-group-item-action">Карта локаций</a>
+                        <a href="https://pawarta.github.io/tools/qr/index.html" target="_blank" rel="noopener noreferrer" class="list-group-item list-group-item-action">Генератор/Сканер QR</a>
+                        <a href="https://pawarta.github.io/tools/quran/index.html" target="_blank" rel="noopener noreferrer" class="list-group-item list-group-item-action">Цифровой Коран</a>
+                        <a href="https://pawarta.github.io/tools/search/index.html" target="_blank" rel="noopener noreferrer" class="list-group-item list-group-item-action">Расширенный поиск</a>
+                        <a href="https://pawarta.github.io/tools/tts/index.html" target="_blank" rel="noopener noreferrer" class="list-group-item list-group-item-action">Синтез речи (TTS)</a>
+                        <a href="https://pawarta.github.io/tools/voice/index.html" target="_blank" rel="noopener noreferrer" class="list-group-item list-group-item-action">Распознавание речи</a>
+                        <a href="https://pawarta.github.io/tools/wa/index.html" target="_blank" rel="noopener noreferrer" class="list-group-item list-group-item-action">Инструмент WhatsApp Direct</a>
+                        <a href="https://pawarta.github.io/tools/wayang/index.html" target="_blank" rel="noopener noreferrer" class="list-group-item list-group-item-action">Каталог Ваянг Кулит</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="pt-5 pb-4 border-top border-warning">
+        <div class="container text-center text-md-start">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5 class="text-white fw-bold mb-3"><span class="rainbow-text">PAWARTA</span></h5>
+                    <p class="small text-secondary">Инновационный цифровой новостной портал, объединяющий яванскую культуру, письмо Хонокороко и современные информационные технологии в киберпространстве.</p>
+                    <div class="fs-4 text-warning">
+                        ꦫꦲꦪꦸ ꦫꦲꦪꦸ ꦫꦲꦪꦸ
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h6 class="text-white fw-bold mb-3">Навигация</h6>
+                    <ul class="list-unstyled small">
+                        <li><a href="https://pawarta.github.io/ru/" target="_blank" rel="noopener noreferrer">Главная / Индекс</a></li>
+                        <li><a href="https://pawarta.github.io/about.html" target="_blank" rel="noopener noreferrer">О нас</a></li>
+                        <li><a href="https://pawarta.github.io/contact.html" target="_blank" rel="noopener noreferrer">Контакты</a></li>
+                        <li><a href="https://pawarta.github.io/privacy.html" target="_blank" rel="noopener noreferrer">Политика конфиденциальности</a></li>
+                        <li><a href="https://pawarta.github.io/terms.html" target="_blank" rel="noopener noreferrer">Условия использования</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h6 class="text-white fw-bold mb-3">Информация о потоке данных</h6>
+                    <p class="small text-secondary mb-1">Имя потока: <strong>pawarta</strong></p>
+                    <p class="small text-secondary mb-1">ID измерения: <code class="text-warning">G-GN5PGKKM3T</code></p>
+                    <p class="small text-secondary">URL: <a href="https://pawarta.github.io" target="_blank" rel="noopener noreferrer">https://pawarta.github.io</a></p>
+                </div>
+            </div>
+            <hr class="border-secondary">
+            <div class="row text-center small text-secondary">
+                <div class="col-md-12">
+                    <p class="mb-0">&copy; 2026 PAWARTA (pawarta.github.io). Все права защищены. Создано с любовью к яванской культуре.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS & AOS Animation Script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS (Animate on Scroll)
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    </script>
+</body>
+</html>

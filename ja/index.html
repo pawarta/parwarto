@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAWARTA - 現代ジャワニュース＆文化ポータル</title>
+    
+    <!-- Meta SEO & Verification -->
+    <meta name="description" content="Pawartaは、デジタルニュースポータル、現代の情報ハブであり、デジタル時代のジャワ文化と言語スクリプト「ホノコロコ」の保存に特化したプラットフォームです。">
+    <meta name="keywords" content="pawarta, ジャワニュース, インドネシアニュース, ホノコロコ, ジャワ文字, ニュースポータル, pawarta github io">
+    <meta name="robots" content="index, follow">
+    <meta name="google-site-verification" content="IAcn_DcNzAkFuMAjiMDNMoUEMZV5oKau1XrJ4aDJlRc">
+    <meta name="msvalidate.01" content="E9411F953448412F854C1FBA584B1383">
+
+    <!-- Open Graph / Social Media Meta -->
+    <meta property="og:title" content="PAWARTA - 現代ジャワニュース＆文化ポータル">
+    <meta property="og:description" content="現代のジャワのタッチを加えたデジタルニュース情報センターおよび文化プラットフォーム。">
+    <meta property="og:image" content="https://pawarta.github.io/pawarta.jpg">
+    <meta property="og:url" content="https://pawarta.github.io/ja/">
+    <meta property="og:type" content="website">
+
+    <!-- Favicon & Icons -->
+    <link rel="icon" href="https://pawarta.github.io/pawarta.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="https://pawarta.github.io/pawarta.ico" type="image/x-icon">
+    <link rel="icon" href="https://pawarta.github.io/pawarta.jpg" type="image/x-icon">
+    <link rel="shortcut icon" href="https://pawarta.github.io/pawarta.png" type="image/x-icon">
+
+    <!-- Canonical & Hreflang Links -->
+    <link rel="canonical" href="https://pawarta.github.io/ja/">
+    <link rel="alternate" href="https://pawarta.github.io/ja/" hreflang="ja">
+    <link rel="alternate" href="https://pawarta.github.io/en-us/" hreflang="en-us">
+    <link rel="alternate" href="https://pawarta.github.io/ar/" hreflang="ar">
+    <link rel="alternate" href="https://pawarta.github.io/" hreflang="x-default">
+    <link rel="alternate" hreflang="fr" href="https://pawarta.github.io/fr/">
+    <link rel="alternate" hreflang="de" href="https://pawarta.github.io/de/">
+    <link rel="alternate" hreflang="th" href="https://pawarta.github.io/th/">
+    <link rel="alternate" hreflang="id" href="https://pawarta.github.io/id/">
+
+    <!-- Stylesheets (Bootstrap 5, Icons, Animate.css) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- AMP Auto Ads -->
+    <script async custom-element="amp-auto-ads" src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js"></script>
+
+    <!-- Google AdSense -->
+    <script async crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9308517202792186"></script>
+
+    <!-- Google tag (gtag.js) - GA4 ID: G-GN5PGKKM3T -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GN5PGKKM3T"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-GN5PGKKM3T');
+    </script>
+
+    <!-- Custom CSS -->
+    <style>
+        :root {
+            --primary-jawa: #2c1d0c;
+            --accent-gold: #d4af37;
+        }
+
+        body {
+            font-family: 'Hiragino Sans', 'Meiryo', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #fcf8f2;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        @keyframes rainbowGlow {
+            0% { color: #ff0000; }
+            14% { color: #ff7f00; }
+            28% { color: #ffff00; }
+            42% { color: #00ff00; }
+            57% { color: #0000ff; }
+            71% { color: #4b0082; }
+            85% { color: #9400d3; }
+            100% { color: #ff0000; }
+        }
+
+        @keyframes rainbowBg {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .rainbow-text {
+            animation: rainbowGlow 6s infinite linear;
+            font-weight: bold;
+        }
+
+        .rainbow-badge {
+            background: linear-gradient(270deg, #ff416c, #ff4b2b, #f12711, #f5af19, #00b09b, #96c93d);
+            background-size: 400% 400%;
+            animation: rainbowBg 10s ease infinite;
+            color: white;
+        }
+
+        .navbar-brand img {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            border: 2px solid var(--accent-gold);
+        }
+
+        .carousel-item {
+            height: 550px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .carousel-overlay {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.55);
+        }
+
+        .carousel-caption {
+            bottom: 20%;
+        }
+
+        .honocoroko-title {
+            font-size: 2.5rem;
+            letter-spacing: 2px;
+            color: var(--accent-gold);
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+        }
+
+        footer {
+            background-color: var(--primary-jawa);
+            color: #d1c7bd;
+        }
+
+        footer a {
+            color: #d4af37;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: #fff;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="https://pawarta.github.io/" target="_blank" rel="noopener noreferrer">
+                <img src="https://pawarta.github.io/pawarta.jpg" alt="Pawartaロゴ">
+                <div>
+                    <span class="rainbow-text fs-4">PAWARTA</span>
+                    <div style="font-size: 10px; color: #d4af37;">ꦥꦮꦂꦠ - 日本ポータル</div>
+                </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav align-items-center gap-3">
+                    <li class="nav-item"><a class="nav-link active" href="https://pawarta.github.io/ja/" target="_blank" rel="noopener noreferrer">ホーム</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://pawarta.github.io/about.html" target="_blank" rel="noopener noreferrer">私たちについて</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://pawarta.github.io/sitemap.html" target="_blank" rel="noopener noreferrer">サイトマップ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://pawarta.github.io/contact.html" target="_blank" rel="noopener noreferrer">お問い合わせ</a></li>
+                    <li class="nav-item">
+                        <a href="https://pawarta.github.io/choices.html" target="_blank" rel="noopener noreferrer" class="btn btn-sm rainbow-badge px-3 py-1">ユーザーの選択</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Responsive Slider Section -->
+    <div id="pawartaSlider" class="carousel slide carousel-fade shadow" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#pawartaSlider" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#pawartaSlider" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#pawartaSlider" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <!-- Slide 1 -->
+            <div class="carousel-item active" style="background-image: url('https://pawarta.github.io/img/bahasa-jawa.jpeg');">
+                <div class="carousel-overlay"></div>
+                <div class="carousel-caption text-center animate__animated animate__fadeInDown">
+                    <h2 class="honocoroko-title">ꦲꦏ꧀ꦱꦫꦗꦮꦭꦸꦩꦶꦤꦲꦶꦤꦫ</h2>
+                    <h1 class="display-4 fw-bold text-white mb-3"><span class="rainbow-text">PAWARTA</span> へようこそ</h1>
+                    <p class="lead text-light">ジャワの文化と地域社会の知恵に根ざした現代のデジタルニュースセンター。</p>
+                    <a href="#artikels" class="btn btn-warning btn-lg fw-bold mt-2 shadow">ニュースを見る</a>
+                </div>
+            </div>
+            <!-- Slide 2 -->
+            <div class="carousel-item" style="background-image: url('https://pawarta.github.io/img/ai.jpeg');">
+                <div class="carousel-overlay"></div>
+                <div class="carousel-caption text-center animate__animated animate__fadeInDown">
+                    <h2 class="honocoroko-title">ꦠꦼꦏ꧀ꦤꦺꦴꦭꦺꦴꦒꦶꦭꦤ꧀ꦄꦆ</h2>
+                    <h1 class="display-4 fw-bold text-white mb-3">デジタルトランスフォーメーションとAI</h1>
+                    <p class="lead text-light">高潔な伝統と人工知能（AI）、そして未来のテクノロジーを結架する。</p>
+                    <a href="https://pawarta.github.io/tools/ai/index.html" target="_blank" rel="noopener noreferrer" class="btn btn-outline-light btn-lg fw-bold mt-2">AIを発見する</a>
+                </div>
+            </div>
+            <!-- Slide 3 -->
+            <div class="carousel-item" style="background-image: url('https://pawarta.github.io/img/3d.jpeg');">
+                <div class="carousel-overlay"></div>
+                <div class="carousel-caption text-center animate__animated animate__fadeInDown">
+                    <h2 class="honocoroko-title">ꦏꦧꦸꦢꦪꦤ꧀ꦤꦸꦱꦤ꧀ꦠꦫ</h2>
+                    <h1 class="display-4 fw-bold text-white mb-3">3Dアートワークとビジュアル</h1>
+                    <p class="lead text-light">ヌサンタラの文化的なタッチが織り込まれた現代のデジタルビジュアル美学を探索。</p>
+                    <a href="https://pawarta.github.io/tools/3d/index.html" target="_blank" rel="noopener noreferrer" class="btn btn-warning btn-lg fw-bold mt-2 shadow">詳細を読む</a>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#pawartaSlider" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">前へ</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#pawartaSlider" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">次へ</span>
+        </button>
+    </div>
+
+    <!-- Main Content & Long Article Section -->
+    <main id="artikels" class="container my-5">
+        <div class="row">
+            <!-- Article Content Area -->
+            <div class="col-lg-8" data-aos="fade-up">
+                <article class="bg-white p-4 p-md-5 rounded-4 shadow-sm border">
+                    <div class="mb-3">
+                        <span class="badge rainbow-badge px-3 py-2">注目 / 特別レポート</span>
+                        <span class="text-muted ms-2"><i class="bi bi-calendar3"></i> 2026年7月30日</span>
+                    </div>
+                    
+                    <h1 class="fw-bold mb-4 text-dark">グローバルなデジタルトランスフォーメーション時代におけるジャワ文化とホノコロコ文字の保存</h1>
+                    
+                    <div class="p-3 mb-4 bg-light border-start border-4 border-warning rounded fst-italic">
+                        "ꦲꦤꦕꦫꦏ꧈ ꦢꦠꦱꦮꦭ꧈ ꦥꦝꦗꦪꦚꦚ꧈ ꦩꦒꦧꦛꦔꦤ꧈ 国家の文明を象徴する高貴な文学的遺産として。"
+                    </div>
+
+                    <p class="lead">グローバル化と急速な技術進歩に特徴づけられる現代において、地域文化や地方言語の存在は大きな課題に直面しています。<strong>PAWARTA</strong>は、地元の知恵と現代のデジタルの進歩を統合するという献身の具体的な現れとして立っています。</p>
+
+                    <h3 class="mt-4 fw-bold text-secondary">ジャワ文字保存の重要性</h3>
+                    <p>一般に<em>ホノコロコ</em>として知られるジャワ文字は、単なる伝統的な筆記用具ではなく、人間、自然、そして創造主の間の調和に関する深い哲学的生命観をカプセル化しています。Pawartaのようなデジタルプラットフォームにより、今日の若い世代は、ガジェット、コンピューター、人工知能（AI）ベースのアプリケーションを通じて、ジャワ文字をより簡単に学習、読解、発展させることができます。</p>
+
+                    <div class="row my-4">
+                        <div class="col-md-6 mb-3" data-aos="zoom-in">
+                            <a href="https://pawarta.github.io/tools/ai/index.html" target="_blank" rel="noopener noreferrer">
+                                <img src="https://pawarta.github.io/img/ai.jpeg" class="img-fluid rounded shadow-sm" alt="AIと文化">
+                            </a>
+                        </div>
+                        <div class="col-md-6 mb-3" data-aos="zoom-in">
+                            <a href="https://pawarta.github.io/tools/calendar/index.html" target="_blank" rel="noopener noreferrer">
+                                <img src="https://pawarta.github.io/img/calendar.jpeg" class="img-fluid rounded shadow-sm" alt="ジャワ暦">
+                            </a>
+                        </div>
+                    </div>
+
+                    <h3 class="mt-4 fw-bold text-secondary">ジャーナリズムにおけるAI技術とソーシャルメディアの役割</h3>
+                    <p>AI時代のジャーナリズムには、スピード、正確性、そして幅広いリーチが求められます。Pawartaは、Google Analytics（G-GN5PGKKM3T）の統合やAdSenseの最適化などの最先端技術を活用し、発信される情報が魅力的であるだけでなく、グローバル基準にも準拠していることを保証します。音声翻訳者、テキスト読み上げ（TTS）、QRコードリーダーなどのさまざまなインタラクティブ機能を通じて、読者は最新ニュースを追う際に新鮮な旅を体験できます。</p>
+
+                    <h3 class="mt-4 fw-bold text-secondary">Pawartaのビジョンとミッション</h3>
+                    <ul class="list-group list-group-flush mb-4">
+                        <li class="list-group-item"><i class="bi bi-check-circle-fill text-success me-2"></i> 正確で客観的かつ信頼できるニュースと情報を提供する。</li>
+                        <li class="list-group-item"><i class="bi bi-check-circle-fill text-success me-2"></i> デジタルプラットフォーム全体でホノコロコ文字とジャワ文学を保存する。</li>
+                        <li class="list-group-item"><i class="bi bi-check-circle-fill text-success me-2"></i> AI技術に敏感な、スマートでテクノロジーに精通したデジタルコミュニティを育成する。</li>
+                    </ul>
+
+                    <p>協力し合い、地域プラットフォームを支援することで、私たちは皆、ジャワ文化が時間の経過とともに色褪せることなく、国際舞台で開花し認知され続けることを確実にする道義的責任を担っています。</p>
+
+                </article>
+            </div>
+
+            <!-- Sidebar Area -->
+            <div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-left">
+                <!-- Widget Kategori / Fitur -->
+                <div class="card shadow-sm border-0 mb-4 rounded-4">
+                    <div class="card-header rainbow-badge text-white fw-bold">
+                        <i class="bi bi-star-fill"></i> 機能とサービスギャラリー
+                    </div>
+                    <div class="card-body">
+                        <div class="row g-2">
+                            <div class="col-6 text-center p-2 border rounded">
+                                <a href="https://pawarta.github.io/tools/voice/index.html" target="_blank" rel="noopener noreferrer" class="text-decoration-none text-dark">
+                                    <img src="https://pawarta.github.io/img/voice.png" style="width: 40px; height: 40px;" alt="音声">
+                                    <div class="small fw-bold mt-1">音声TTS</div>
+                                </a>
+                            </div>
+                            <div class="col-6 text-center p-2 border rounded">
+                                <a href="https://pawarta.github.io/tools/ai/index.html" target="_blank" rel="noopener noreferrer" class="text-decoration-none text-dark">
+                                    <img src="https://pawarta.github.io/img/ai.jpeg" style="width: 40px; height: 40px; object-fit: cover;" alt="AI">
+                                    <div class="small fw-bold mt-1">スマートAI</div>
+                                </a>
+                            </div>
+                            <div class="col-6 text-center p-2 border rounded">
+                                <a href="https://pawarta.github.io/tools/quran/index.html" target="_blank" rel="noopener noreferrer" class="text-decoration-none text-dark">
+                                    <img src="https://pawarta.github.io/img/quran.png" style="width: 40px; height: 40px;" alt="宗教">
+                                    <div class="small fw-bold mt-1">宗教セクション</div>
+                                </a>
+                            </div>
+                            <div class="col-6 text-center p-2 border rounded">
+                                <a href="https://pawarta.github.io/tools/qr/index.html" target="_blank" rel="noopener noreferrer" class="text-decoration-none text-dark">
+                                    <img src="https://pawarta.github.io/img/qr.png" style="width: 40px; height: 40px;" alt="QR">
+                                    <div class="small fw-bold mt-1">QRスキャナー</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Widget Iklan / AdSense Placeholder -->
+                <div class="card shadow-sm border-0 mb-4 rounded-4 text-center p-3 bg-light">
+                    <div class="small text-muted mb-2">--- 広告スペース / Google AdSense ---</div>
+                    <ins class="adsbygoogle"
+                         style="display:block"
+                         data-ad-client="ca-pub-9308517202792186"
+                         data-ad-slot="auto"
+                         data-ad-format="auto"
+                         data-full-width-responsive="true"></ins>
+                    <script>
+                         (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
+
+                <!-- Navigasi kaca pendukung & Tools -->
+                <div class="card shadow-sm border-0 rounded-4 mb-4">
+                    <div class="card-header bg-dark text-white fw-bold">
+                        <i class="bi bi-link-45deg"></i> 重要なリンク
+                    </div>
+                    <div class="list-group list-group-flush rounded-bottom">
+                        <a href="https://pawarta.github.io/" target="_blank" rel="noopener noreferrer" class="list-group-item list-group-item-action">メインポータル (ホーム)</a>
+                        <a href="https://pawarta.github.io/about.html" target="_blank" rel="noopener noreferrer" class="list-group-item list-group-item-action">私たちについて</a>
+                        <a href="https://pawarta.github.io/contact.html" target="_blank" rel="noopener noreferrer" class="list-group-item list-group-item-action">お問い合わせ</a>
+                        <a href="https://pawarta.github.io/privacy.html" target="_blank" rel="noopener noreferrer" class="list-group-item list-group-item-action">プライバシーポリシー</a>
+                        <a href="https://pawarta.github.io/terms.html" target="_blank" rel="noopener noreferrer" class="list-group-item list-group-item-action">利用規約</a>
+                        <a href="https://pawarta.github.io/disclaimer.html" target="_blank" rel="noopener noreferrer" class="list-group-item list-group-item-action">免責事項</a>
+                        <a href="https://pawarta.github.io/license.html" target="_blank" rel="noopener noreferrer" class="list-group-item list-group-item-action">ライセンス</a>
+                        <a href="https://pawarta.github.io/LICENSE" target="_blank" rel="noopener noreferrer" class="list-group-item list-group-item-action">LICENSEファイル</a>
+                        <a href="https://pawarta.github.io/gdpr.html" target="_blank" rel="noopener noreferrer" class="list-group-item list-group-item-action">GDPRコンプライアンス</a>
+                        <a href="https://pawarta.github.io/choices.html" target="_blank" rel="noopener noreferrer" class="list-group-item list-group-item-action">ユーザーの選択</a>
+                        <a href="https://pawarta.github.io/sitemap.html" target="_blank" rel="noopener noreferrer" class="list-group-item list-group-item-action">サイトマップ</a>
+                    </div>
+                </div>
+
+                <!-- Tools & Utilities -->
+                <div class="card shadow-sm border-0 rounded-4">
+                    <div class="card-header rainbow-badge text-white fw-bold">
+                        <i class="bi bi-tools"></i> ツールとサービス
+                    </div>
+                    <div class="list-group list-group-flush rounded-bottom small">
+                        <a href="https://pawarta.github.io/tools/3d/index.html" target="_blank" rel="noopener noreferrer" class="list-group-item list-group-item-action">3Dビューアツール</a>
+                        <a href="https://pawarta.github.io/tools/IP/index.html" target="_blank" rel="noopener noreferrer" class="list-group-item list-group-item-action">IP検索ツール</a>
+                        <a href="https://pawarta.github.io/tools/ai/index.html" target="_blank" rel="noopener noreferrer" class="list-group-item list-group-item-action">AIアシスタントツール</a>
+                        <a href="https://pawarta.github.io/tools/bahasa-jawa/index.html" target="_blank" rel="noopener noreferrer" class="list-group-item list-group-item-action">ジャワ語翻訳ツール</a>
+                        <a href="https://pawarta.github.io/tools/calendar/index.html" target="_blank" rel="noopener noreferrer" class="list-group-item list-group-item-action">ジャワ暦 / ウェトン</a>
+                        <a href="https://pawarta.github.io/tools/macapat/index.html" target="_blank" rel="noopener noreferrer" class="list-group-item list-group-item-action">マカパット歌</a>
+                        <a href="https://pawarta.github.io/tools/maps/index.html" target="_blank" rel="noopener noreferrer" class="list-group-item list-group-item-action">ロケーションマップ</a>
+                        <a href="https://pawarta.github.io/tools/qr/index.html" target="_blank" rel="noopener noreferrer" class="list-group-item list-group-item-action">QRコード生成・スキャナー</a>
+                        <a href="https://pawarta.github.io/tools/quran/index.html" target="_blank" rel="noopener noreferrer" class="list-group-item list-group-item-action">デジタルアル・コーラン</a>
+                        <a href="https://pawarta.github.io/tools/search/index.html" target="_blank" rel="noopener noreferrer" class="list-group-item list-group-item-action">高度な検索</a>
+                        <a href="https://pawarta.github.io/tools/tts/index.html" target="_blank" rel="noopener noreferrer" class="list-group-item list-group-item-action">テキスト読み上げ (TTS)</a>
+                        <a href="https://pawarta.github.io/tools/voice/index.html" target="_blank" rel="noopener noreferrer" class="list-group-item list-group-item-action">音声認識</a>
+                        <a href="https://pawarta.github.io/tools/wa/index.html" target="_blank" rel="noopener noreferrer" class="list-group-item list-group-item-action">WhatsAppダイレクトツール</a>
+                        <a href="https://pawarta.github.io/tools/wayang/index.html" target="_blank" rel="noopener noreferrer" class="list-group-item list-group-item-action">ワヤン・クリットカタログ</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="pt-5 pb-4 border-top border-warning">
+        <div class="container text-center text-md-start">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5 class="text-white fw-bold mb-3"><span class="rainbow-text">PAWARTA</span></h5>
+                    <p class="small text-secondary">サイバー空間において、ジャワ文化、ホノコロコ文字、現代情報技術を統合する革新的なデジタルニュースポータル。</p>
+                    <div class="fs-4 text-warning">
+                        ꦫꦲꦪꦸ ꦫꦲꦪꦸ ꦫꦲꦪꦸ
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h6 class="text-white fw-bold mb-3">サイトリンク</h6>
+                    <ul class="list-unstyled small">
+                        <li><a href="https://pawarta.github.io/ja/" target="_blank" rel="noopener noreferrer">ホーム / インデックス</a></li>
+                        <li><a href="https://pawarta.github.io/about.html" target="_blank" rel="noopener noreferrer">私たちについて</a></li>
+                        <li><a href="https://pawarta.github.io/contact.html" target="_blank" rel="noopener noreferrer">お問い合わせ</a></li>
+                        <li><a href="https://pawarta.github.io/privacy.html" target="_blank" rel="noopener noreferrer">プライバシーポリシー</a></li>
+                        <li><a href="https://pawarta.github.io/terms.html" target="_blank" rel="noopener noreferrer">利用規約</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h6 class="text-white fw-bold mb-3">データストリーム情報</h6>
+                    <p class="small text-secondary mb-1">ストリーム名: <strong>pawarta</strong></p>
+                    <p class="small text-secondary mb-1">測定ID: <code class="text-warning">G-GN5PGKKM3T</code></p>
+                    <p class="small text-secondary">URL: <a href="https://pawarta.github.io" target="_blank" rel="noopener noreferrer">https://pawarta.github.io</a></p>
+                </div>
+            </div>
+            <hr class="border-secondary">
+            <div class="row text-center small text-secondary">
+                <div class="col-md-12">
+                    <p class="mb-0">&copy; 2026 PAWARTA (pawarta.github.io). All Rights Reserved. Crafted with love for Javanese culture.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS & AOS Animation Script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS (Animate on Scroll)
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    </script>
+</body>
+</html>

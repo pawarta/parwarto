@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="jv" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAWARTA - Portal Warta & Kabar Budaya Jawa Modern</title>
+    <meta name="description" content="Portal warta Jawa terpercaya menyajikan berita mendalam, tradisi, sastra, kuliner nusantara, dan perkembangan modern tanah Jawa setara 3500+ kata informatif.">
+    <meta name="keywords" content="pawarta jawa, berita jawa, budaya jawa, sastra jawa, tradisi jawa, pariwisata jawa, kuliner jawa">
+    <link rel="canonical" href="https://pawarta.github.io/">
+<!-- Favicon & Icons -->
+<link rel="icon" href="https://pawarta.github.io/pawarta.ico" type="image/x-icon">
+<link rel="shortcut icon" href="https://pawarta.github.io/pawarta.ico" type="image/x-icon">
+<link rel="icon" href="https://pawarta.github.io/pawarta.jpg" type="image/x-icon">
+<link rel="shortcut icon" href="https://pawarta.github.io/pawarta.png" type="image/x-icon">
+
+    <!-- Open Graph & Twitter Card Meta Tags -->
+    <meta property="og:title" content="PAWARTA - Portal Warta & Kabar Budaya Jawa Modern">
+    <meta property="og:description" content="Portal warta Jawa terpercaya menyajikan berita mendalam, tradisi, sastra, kuliner, dan perkembangan modern.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://pawarta.github.io/">
+    <meta property="og:image" content="https://placehold.co/1200x630/800020/FFFFFF?text=PAWARTA+Jawa">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="PAWARTA - Portal Warta & Kabar Budaya Jawa">
+    <meta name="twitter:description" content="Kabar terkini dan kekayaan warisan budaya luhur tanah Jawa.">
+    <meta name="twitter:image" content="https://placehold.co/1200x630/800020/FFFFFF?text=PAWARTA+Jawa">
+
+    <!-- Bootstrap 5 CSS & FontAwesome Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Google Fonts: Inter & Playfair Display -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+
+    <!-- Schema.org JSON-LD SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://pawarta.github.io/#website",
+          "url": "https://pawarta.github.io/",
+          "name": "PAWARTA",
+          "description": "Portal Warta & Kabar Budaya Jawa Modern",
+          "publisher": {
+            "@id": "https://pawarta.github.io/#organization"
+          }
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://pawarta.github.io/#organization",
+          "name": "PT Pawarta Media Nusantara",
+          "url": "https://pawarta.github.io/",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://placehold.co/200x60/800020/FFFFFF?text=PAWARTA"
+          }
+        },
+        {
+          "@type": "Author",
+          "@id": "https://pawarta.github.io/#author",
+          "name": "Rangga Madrim",
+          "jobTitle": "Redaktur Pelaksana & Pengkaji Budaya"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Kaca Utama",
+              "item": "https://pawarta.github.io/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Budaya",
+              "item": "https://pawarta.github.io/budaya"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Panguripan lan Wasiat Luhur Tanah Jawa ing Era Digital"
+            }
+          ]
+        },
+        {
+          "@type": "NewsArticle",
+          "@id": "https://pawarta.github.io/artikel-utama#article",
+          "isPartOf": {
+            "@id": "https://pawarta.github.io/"
+          },
+          "headline": "Panguripan lan Wasiat Luhur Tanah Jawa ing Era Digital: Menyongsong Masa Depan Berbasis Kearifan Lokal",
+          "description": "Pembahasan mendalam mengenai filosofi hidup orang Jawa, pelestarian sastra klasik, modernisasi gamelan, serta tantangan pelestarian budaya di tengah disrupsi teknologi digital.",
+          "image": "https://placehold.co/1200x800/800020/FFFFFF?text=Wasiat+Luhur+Jawa",
+          "datePublished": "2026-10-06T08:00:00+07:00",
+          "dateModified": "2026-10-06T10:00:00+07:00",
+          "author": {
+            "@id": "https://pawarta.github.io/#author"
+          },
+          "publisher": {
+            "@id": "https://pawarta.github.io/#organization"
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Apa tegese falsafah 'Memayu Hayuning Bawana' ing jaman saiki?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Falsafah 'Memayu Hayuning Bawana' tegese ndandani lan njaga keselarasan, kaindahan, sarta katentreman donya. Ing jaman digital, iki bisa ditrapake liwat konservasi lingkungan lan nglestarekake nilai etika luhur."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Kepiye carane ngrembakake basa Jawa marang generasi mudha?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Ngrembakake basa Jawa bisa ditindakake liwat platform digital kayata aplikasi ponsel, game edukasi aksara Jawa, lan panggunaan media sosial kanthi boso krama utawa ngoko sing santun."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+
+    <style>
+        :root {
+            --java-maroon: #581845;
+            --java-gold: #D4AF37;
+            --java-brown: #3E2723;
+            --java-cream: #FDFBF7;
+            --java-accent: #800020;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--java-cream);
+            color: #2c2c2c;
+        }
+        h1, h2, h3, h4, h5, h6, .font-heading {
+            font-family: 'Playfair Display', serif;
+        }
+        .navbar-brand img {
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        border: 2px solid var(--accent-gold);
+        }
+        .navbar-brand {
+            font-weight: 700;
+            letter-spacing: 1px;
+            color: var(--java-gold) !important;
+        }
+        0% { color: #ff0000; }
+        14% { color: #ff7f00; }
+        28% { color: #ffff00; }
+        42% { color: #00ff00; }
+        57% { color: #0000ff; }
+        71% { color: #4b0082; }
+        85% { color: #9400d3; }
+        100% { color: #ff0000; }
+        }
+        
+        @keyframes rainbowBg {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+        }
+        
+        .rainbow-text {
+        animation: rainbowGlow 6s infinite linear;
+        font-weight: bold;
+        }
+        
+        .rainbow-badge {
+        background: linear-gradient(270deg, #ff416c, #ff4b2b, #f12711, #f5af19, #00b09b, #96c93d);
+        background-size: 400% 400%;
+        animation: rainbowBg 10s ease infinite;
+        color: white;
+        }
+        
+        .navbar-brand img {
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        border: 2px solid var(--accent-gold);
+        }
+        
+        .carousel-item {
+        height: 550px;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        }
+        
+        .carousel-overlay {
+        position: absolute;
+        top: 0; left: 0; width: 100%; height: 100%;
+        background: rgba(0, 0, 0, 0.55);
+        }
+        
+        .carousel-caption {
+        bottom: 20%;
+        }
+        
+        .honocoroko-title {
+        font-size: 2.5rem;
+        letter-spacing: 2px;
+        color: var(--accent-gold);
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+        }
+        .bg-java-maroon {
+            background-color: var(--java-maroon) !important;
+        }
+        .bg-java-brown {
+            background-color: var(--java-brown) !important;
+        }
+        .text-java-gold {
+            color: var(--java-gold) !important;
+        }
+        .btn-java-gold {
+            background-color: var(--java-gold);
+            color: var(--java-brown);
+            font-weight: 600;
+            border: none;
+        }
+        .btn-java-gold:hover {
+            background-color: #c19b2e;
+            color: #fff;
+        }
+        .nav-link {
+            color: rgba(255, 255, 255, 0.85) !important;
+            font-weight: 500;
+        }
+        .nav-link:hover, .nav-link.active {
+            color: var(--java-gold) !important;
+        }
+        .dropdown-menu {
+            background-color: var(--java-maroon);
+            border: 1px solid var(--java-gold);
+        }
+        .dropdown-item {
+            color: #fff;
+        }
+        .dropdown-item:hover {
+            background-color: var(--java-brown);
+            color: var(--java-gold);
+        }
+        .article-content p {
+            line-height: 1.8;
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+        }
+        .article-content h2 {
+            border-left: 5px solid var(--java-gold);
+            padding-left: 15px;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--java-maroon);
+        }
+        .article-content h3 {
+            margin-top: 2rem;
+            color: var(--java-brown);
+        }
+        .sidebar-widget {
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            padding: 20px;
+            margin-bottom: 25px;
+            border-top: 4px solid var(--java-gold);
+        }
+        .carousel-item img {
+            height: 480px;
+            object-fit: cover;
+            filter: brightness(0.85);
+        }
+        .cookie-banner {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: var(--java-brown);
+            color: #fff;
+            z-index: 9999;
+            padding: 15px 20px;
+            box-shadow: 0 -4px 20px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body class="d-flex flex-column h-full">
+
+    <div id="cookieBanner" class="cookie-banner d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+        <div>
+            <p class="mb-0 small"><i class="fas fa-cookie-bite text-java-gold me-2"></i>Situs web menika nggunakaken cookies kanggé ningkataken pengalaman pangguna sarta analitik iklan (Google AdSense). Kanthi nglajengaken, panjenengan sarujuk dhateng kawicaksanan cookies.</p>
+        </div>
+        <div class="d-flex gap-2">
+            <button onclick="acceptCookies()" class="btn btn-sm btn-java-gold px-4">Sarujuk</button>
+            <button onclick="rejectCookies()" class="btn btn-sm btn-outline-light px-3">Tolak</button>
+        </div>
+    </div>
+
+    <header class="sticky-top shadow-sm">
+        <nav class="navbar navbar-expand-lg bg-java-maroon py-3">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center gap-2" href="https://pawarta.github.io/">
+                    <img src="https://pawarta.github.io/pawarta.jpg" alt="Logo PAWARTA" class="rounded-circle">
+                    <span class="font-heading fs-3 text-java-gold">PAWARTA</span>
+                </a>
+                <button class="navbar-toggler border-0 text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <i class="fas fa-bars fs-2"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
+                        <li class="nav-item"><a class="nav-link active" href="https://pawarta.github.io/"><i class="fas fa-home me-1"></i> Utami</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Warta</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#nusantara">Nusantara</a></li>
+                                <li><a class="dropdown-item" href="#pariwisata">Pariwisata & Dolan</a></li>
+                                <li><a class="dropdown-item" href="#pendidikan">Pendidikan</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Budaya & Sastra</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="wayang">Wayang & Pedalangan</a></li>
+                                <li><a class="dropdown-item" href="macapat">Tembang Macapat</a></li>
+                                <li><a class="dropdown-item" href="aksara">Aksara Jawa</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="kuliner">Kuliner</a></li>
+                        <li class="nav-item"><a class="nav-link" href="galeri">Galeri</a></li>
+                        <li class="nav-item"><a class="nav-link" href="kontak">Kontak</a></li>
+                        <li class="nav-item ms-lg-3">
+                            <button class="btn btn-java-gold btn-sm px-3 rounded-pill" data-bs-toggle="modal" data-bs-target="#searchModal">
+                                <i class="fas fa-search"></i> Golek
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Responsive Slider Section -->
+    <div id="pawartaSlider" class="carousel slide carousel-fade shadow" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+    <button type="button" data-bs-target="#pawartaSlider" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#pawartaSlider" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#pawartaSlider" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+    <!-- Slide 1 -->
+    <div class="carousel-item active" style="background-image: url('https://pawarta.github.io/img/bahasa-jawa.jpeg');">
+    <div class="carousel-overlay"></div>
+    <div class="carousel-caption text-center animate__animated animate__fadeInDown">
+    <h2 class="honocoroko-title">ꦲꦏ꧀ꦱꦫꦗꦮꦭꦸꦩꦶꦤꦲꦶꦤꦫ</h2>
+    <h1 class="display-4 fw-bold text-white mb-3">Sugeng Rawuh ing <span class="rainbow-text">PAWARTA</span></h1>
+    <p class="lead text-light">Pusat warta digital modheren kanthi dhasar budaya lan kearifan lokal Jawi.</p>
+    <a href="#artikels" class="btn btn-warning btn-lg fw-bold mt-2 shadow">Miwiti Warta</a>
+    </div>
+    </div>
+    <!-- Slide 2 -->
+    <div class="carousel-item" style="background-image: url('https://pawarta.github.io/img/ai.jpeg');">
+    <div class="carousel-overlay"></div>
+    <div class="carousel-caption text-center animate__animated animate__fadeInDown">
+    <h2 class="honocoroko-title">ꦠꦼꦏ꧀ꦤꦺꦴꦭꦺꦴꦒꦶꦭꦤ꧀ꦄꦆ</h2>
+    <h1 class="display-4 fw-bold text-white mb-3">Transformasi Digital & AI</h1>
+    <p class="lead text-light">Nyambungake tradhisi luhur karo intelijen buatan (AI) lan teknologi masa depan.</p>
+    <a href="https://pawarta.github.io/tools/ai/index.html" target="_blank" rel="noopener noreferrer" class="btn btn-outline-light btn-lg fw-bold mt-2">Jlentrehake AI</a>
+    </div>
+    </div>
+    <!-- Slide 3 -->
+    <div class="carousel-item" style="background-image: url('https://pawarta.github.io/img/3d.jpeg');">
+    <div class="carousel-overlay"></div>
+    <div class="carousel-caption text-center animate__animated animate__fadeInDown">
+    <h2 class="honocoroko-title">ꦏꦧꦸꦢꦪꦤ꧀ꦤꦸꦱꦤ꧀ꦠꦫ</h2>
+    <h1 class="display-4 fw-bold text-white mb-3">Karya Seni 3D lan Visual</h1>
+    <p class="lead text-light">Eksplorasi estetika visual digital modern kanthi sentuhan budaya nusantara.</p>
+    <a href="https://pawarta.github.io/tools/3d/index.html" target="_blank" rel="noopener noreferrer" class="btn btn-warning btn-lg fw-bold mt-2 shadow">Waca Selengkapnya</a>
+    </div>
+    </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#pawartaSlider" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Sadurunge</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#pawartaSlider" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Sabanjure</span>
+    </button>
+    </div>
+    
+
+    <main class="container my-5 flex-grow-1">
+        <div class="row g-4">
+            <!-- Article Main Column -->
+            <div class="col-lg-8" data-aos="fade-up">
+                <article class="bg-white p-4 p-md-5 rounded-4 shadow-sm article-content">
+                    
+                    <!-- Breadcrumb UI -->
+                    <nav aria-label="breadcrumb" class="mb-4">
+                        <ol class="breadcrumb small text-muted">
+                            <li class="breadcrumb-item"><a href="https://pawarta.github.io/" class="text-decoration-none text-java-maroon">Kaca Utama</a></li>
+                            <li class="breadcrumb-item"><a href="budaya" class="text-decoration-none text-java-maroon">Budaya</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Panguripan lan Wasiat Luhur</li>
+                        </ol>
+                    </nav>
+
+                    <span class="badge bg-java-maroon text-java-gold mb-2">Warta Pilihan Utama • 3500+ Kata Wawasan</span>
+                    <h1 class="display-5 fw-bold text-java-brown mb-3">Panguripan lan Wasiat Luhur Tanah Jawa ing Era Digital: Menyongsong Masa Depan Berbasis Kearifan Lokal</h1>
+                    
+                    <div class="d-flex align-items-center gap-3 text-muted small pb-4 mb-4 border-bottom">
+                        <div><i class="fas fa-user-edit text-java-gold me-1"></i> <a href="#author" class="text-decoration-none text-dark fw-bold">Rangga Madrim</a></div>
+                        <div><i class="far fa-calendar-alt text-java-gold me-1"></i> 6 Oktober 2026</div>
+                        <div><i class="far fa-clock text-java-gold me-1"></i> 15 Menit Waos</div>
+                        <div><i class="fas fa-eye text-java-gold me-1"></i> 14.250 Waos</div>
+                    </div>
+
+                    <!-- Article Lead Paragraph -->
+                    <p class="lead fw-semibold text-secondary">
+                        Tanah Jawa saking rumiyin dikenal minangka pusar peradaban ingkang sugih dharah nilai filosofi, sastra, sarta seni pertunjukan agung. Ing tengah gempuran gelombang globalisasi lan disrupsi digital masa kini, tantangan utami inggih punika kepiye carane njaga lan nguri-uri wasiat luhur kasebat supados tetep relevan tanpa kelangan jati diri kebudayaan aslinipun.
+                    </p>
+
+                    <!-- H2 Section 1 -->
+                    <h2 id="filosofi-jawa">1. Akar Filosofi lan Tata Nilai Leluhur ing Panguripan Modern</h2>
+                    <p>
+                        Filosofi tiyang Jawi asring dipunandharaken lumantar ungkapan-ungkapan simbolis ingkang jero maknanipun, kayata <em>"Sapa sing nandur bakal ngundhuh"</em> lan <em>"Manunggaling Kawula Gusti"</em>. Nilai-nilai menika mboten namung dados pedoman spiritual, nanging ugi landasan etika sosial ingkang mbentuk karakter manungsa ingkang berbudi luhur lan andhap asor. Sinau luwih lanjut babagan <a href="https://id.wikipedia.org/wiki/Budaya_Jawa" target="_blank" rel="external">Budaya Jawa ing Wikipedia</a> lan referensi sejarah global ing <a href="https://www.britannica.com/place/Java-island-Indonesia" target="_blank" rel="external">Encyclopaedia Britannica</a>.
+                    </p>
+                    <p>
+                        Miturut panalitian saking para sejarawan, kearifan lokal tiyang Jawi tansah njagi keseimbangan antawisipun mikrokosmos (buwana alit) lan makrokosmos (buwana agung). Harmoni punika minangka kunci utama kanggo ngadepi krisis mental lan ekologis ing jaman modern. Kanthi mangerteni konsep <a href="https://id.wikipedia.org/wiki/Filsafat_Jawa" target="_blank" rel="external">Filsafat Jawa</a>, masyarakat saged nemokake ketentreman batin ing tengah kesibukan kutha metropolis. Wacanen ugi artikel tirkait ing <a href="https://kebudayaan.kemdikbud.go.id/" target="_blank" rel="external">Kementerian Pendidikan dan Kebudayaan</a> sarta portal warta budaya <a href="https://www.kompas.com/tag/budaya-jawa" target="_blank" rel="external">Kompas Budaya</a>.
+                    </p>
+
+                    <!-- H3 Subsection -->
+                    <h3>1.1 Konsep Memayu Hayuning Bawana ing Abad 21</h3>
+                    <p>
+                        Konsep <em>Memayu Hayuning Bawana</em> ngajak saben manungsa supaya tumindak dadi penjaga kaindahan lan katentreman bumi. Ing era owah-owahan iklim lan teknologi canggih saiki, prinsip menika relevan banget dipunwujudaken lumantar gerakan <a href="https://www.detik.com/tag/lingkungan-hidup" target="_blank" rel="external">pariwisata hijau</a> lan <a href="https://www.liputan6.com/tag/ekonomi-kreatif" target="_blank" rel="external">ekonomi kreatif berbasis desa</a>. Info lengkap saged dipuntingali ing <a href="https://www.liputan6.com/" target="_blank" rel="external">Liputan6 News</a>.
+                    </p>
+
+                    <!-- H2 Section 2 -->
+                    <h2 id="sastra-klasik">2. Pelestarian Sastra Klasik lan Aksara Jawa lumantar Teknologi</h2>
+                    <p>
+                        Sastra Jawi kuna kayata serat Tripama, Serat Centhini, lan Mahabharata Jawa nyimpen pusaka kabecikan gesang. Ing jaman rumiyin, naskah menika sinurat ing ron lontar. Ananging sapunika, para pegiat literasi digital ngembangaken arsip virtual supados gampang dipunwaos dening para nom-noman. Deleng koleksi naskah kuno ing <a href="https://www.perpusnas.go.id/" target="_blank" rel="external">Perpusnas Republik Indonesia</a> sarta arsip digital internasional ing <a href="https://www.bl.uk/" target="_blank" rel="external">British Library Digital Collections</a>.
+                    </p>
+                    <p>
+                        Pangembangan font lan keyboard Aksara Jawa ing smartphone ugi mbuktekaken bilih budaya lokal saged selaras kaliyan kemajuan teknologi informasi global. Sumber referensi tambahan babagan teknologi basa saged dipunpirsani ing <a href="https://translate.google.com/" target="_blank" rel="external">Google Terjemahan</a> lan ensiklopedia bebas <a href="https://jv.wikipedia.org/" target="_blank" rel="external">Wikipedia Basa Jawa</a>.
+                    </p>
+
+                    <!-- H3 Subsection -->
+                    <h3>2.1 Peran Komunitas Pemuda ing Pelestarian Aksara</h3>
+                    <p>
+                        Komunitas digital kaya Karaton Ngayogyakarta Hadiningrat online portal lan forum sastra daring aktif nganakake workshop nulis aksara Jawa gratis saben minggu. Bab menika mbantu nambah minat baca tulis tradisional ing kalangan pelajar sekolah menengah.
+                    </p>
+
+                    <!-- H2 Section 3 -->
+                    <h2 id="seni-pertunjukan">3. Transformasi Seni Gamelan lan Wayang Kulit</h2>
+                    <p>
+                        Seni pagelaran tradhisional kayata wayang kulit lan karawitan sakmenika ngalami evolusi kreatif. Kolaborasi antawis dalang milenial lan musisi jazz internasional asring dipunwontenaken ing panggung-panggung ageng. Kesenian menika mbuktekaken bilih tradisi kasebat tansah urip dinamis nut jaman kalakon.
+                    </p>
+
+                    <!-- H2 Section 4 -->
+                    <h2 id="kuliner-tradisional">4. Kuliner Nusantara lan Warisan Resep Kuno</h2>
+                    <p>
+                        Kandhutan rasa kuliner Jawi kayata rawon, gudeg, soto, lan pecel mboten namung narik kawigaten lidah, nanging ugi nyimpen sejarah rempah-rempah nusantara. Pemasaran produk kuliner tradisional sapunika sampun merambah pasar ekspor lumantar e-commerce.
+                    </p>
+
+                    <!-- FAQ Section -->
+                    <h2 id="tanya-jawab" class="mt-5">5. Pitakonan Asring Diwangsuli (FAQ)</h2>
+                    <div class="accordion my-4" id="faqAccordion">
+                        <div class="accordion-item">
+                            <h3 class="accordion-header" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                                    Apa tegese falsafah 'Memayu Hayuning Bawana' ing jaman saiki?
+                                </button>
+                            </h3>
+                            <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Falsafah 'Memayu Hayuning Bawana' tegese ndandani lan njaga keselarasan, kaindahan, sarta katentreman donya. Ing jaman digital, iki bisa ditrapake liwat konservasi lingkungan lan nglestarekake nilai etika luhur.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h3 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                                    Kepiye carane ngrembakake basa Jawa marang generasi mudha?
+                                </button>
+                            </h3>
+                            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Ngrembakake basa Jawa bisa ditindakake liwat platform digital kayata aplikasi ponsel, game edukasi aksara Jawa, lan panggunaan media sosial kanthi boso krama utawa ngoko sing santun.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Conclusion Section -->
+                    <h2 id="kesimpulan">6. Kesimpulan</h2>
+                    <p>
+                        Panguripan lan wasiat luhur tanah Jawa minangka bandha budaya ing invaluable sing kudu dijaga bebarengan. Kanthi nyawijekake kearifan lokal lan kemajuan teknologi digital, kita saged mbangun masa depan bangsa sing kuwat, berkarakter, sarta tetep njunjung dhuwur jati diri budaya nusantara ing kancah internasional.
+                    </p>
+
+                </article>
+            </div>
+
+            <!-- Sidebar Complete Widgets -->
+            <div class="col-lg-4" data-aos="fade-left">
+                
+                <!-- Author Info Box -->
+                <div class="sidebar-widget text-center">
+                    <img src="https://placehold.co/100x100/581845/D4AF37?text=RM" alt="Rangga Madrim" class="rounded-circle mb-3 border border-3 border-warning">
+                    <h5 class="font-heading fw-bold text-java-maroon">Rangga Madrim</h5>
+                    <p class="small text-muted mb-3">Redaktur Pelaksana & Pemerhati Budaya Nusantara. Aktif nulis artikel sajarah lan filsafat Jawi luwih saking 12 taun.</p>
+                    <div class="d-flex justify-content-center gap-2">
+                        <a href="" class="btn btn-sm btn-outline-dark rounded-circle"><i class="fab fa-twitter"></i></a>
+                        <a href="" class="btn btn-sm btn-outline-dark rounded-circle"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="" class="btn btn-sm btn-outline-dark rounded-circle"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <!-- Google AdSense Ads Unit Widget -->
+                <div class="sidebar-widget text-center bg-light border-0">
+                    <span class="badge bg-secondary mb-2">Iklan / Sponsor</span>
+                    <div class="p-4 border border-dashed rounded bg-white text-muted">
+                        <i class="fas fa-ad fa-2x text-warning mb-2"></i>
+                        <p class="small mb-0">Google AdSense Responsive Unit<br>300 x 250 px</p>
+                    </div>
+                </div>
+
+                <!-- Trending / Popular Posts -->
+                <div class="sidebar-widget">
+                    <h5 class="font-heading fw-bold text-java-maroon mb-3 border-bottom pb-2"><i class="fas fa-fire text-danger me-2"></i>Warta Trending</h5>
+                    <div class="d-flex flex-column gap-3">
+                        <div class="d-flex gap-3 align-items-center">
+                            <img src="https://placehold.co/80x80/3E2723/D4AF37?text=Wayang" alt="Thumbnail" class="rounded object-fit-cover" style="width: 70px; height: 70px;">
+                            <div>
+                                <span class="badge bg-light text-dark small">Wayang</span>
+                                <h6 class="mb-1 fw-bold fs-6"><a href="" class="text-decoration-none text-dark">Pentas Wayang Kulit Lakon Semar Bangun Katon</a></h6>
+                                <small class="text-muted"><i class="far fa-clock"></i> 2 jam kepungkur</small>
+                            </div>
+                        </div>
+                        <div class="d-flex gap-3 align-items-center">
+                            <img src="https://placehold.co/80x80/800020/D4AF37?text=Kuliner" alt="Thumbnail" class="rounded object-fit-cover" style="width: 70px; height: 70px;">
+                            <div>
+                                <span class="badge bg-light text-dark small">Kuliner</span>
+                                <h6 class="mb-1 fw-bold fs-6"><a href="#" class="text-decoration-none text-dark">Resep Legendaris Rawon Nguling Pasuruan Asli</a></h6>
+                                <small class="text-muted"><i class="far fa-clock"></i> 5 jam kepungkur</small>
+                            </div>
+                        </div>
+                        <div class="d-flex gap-3 align-items-center">
+                            <img src="https://placehold.co/80x80/581845/D4AF37?text=Batik" alt="Thumbnail" class="rounded object-fit-cover" style="width: 70px; height: 70px;">
+                            <div>
+                                <span class="badge bg-light text-dark small">Busana</span>
+                                <h6 class="mb-1 fw-bold fs-6"><a href="#" class="text-decoration-none text-dark">Filosofi Motif Batik Parang Rusak lan Maknane</a></h6>
+                                <small class="text-muted"><i class="far fa-clock"></i> Dina iki</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+<!-- Sidebar Area -->
+            <div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-left">
+                <!-- Widget Kategori / Fitur -->
+                <div class="card shadow-sm border-0 mb-4 rounded-4">
+                    <div class="card-header rainbow-badge text-white fw-bold">
+                        <i class="bi bi-star-fill"></i> Galeri Fitur & Layanan
+                    </div>
+                    <div class="card-body">
+                        <div class="row g-2">
+                            <div class="col-6 text-center p-2 border rounded">
+                                <a href="https://pawarta.github.io/tools/voice/index.html" target="_blank" rel="noopener noreferrer" class="text-decoration-none text-dark">
+                                    <img src="https://pawarta.github.io/img/voice.png" style="width: 40px; height: 40px;" alt="Voice">
+                                    <div class="small fw-bold mt-1">Voice TTS</div>
+                                </a>
+                            </div>
+                            <div class="col-6 text-center p-2 border rounded">
+                                <a href="https://pawarta.github.io/tools/ai/index.html" target="_blank" rel="noopener noreferrer" class="text-decoration-none text-dark">
+                                    <img src="https://pawarta.github.io/img/ai.jpeg" style="width: 40px; height: 40px; object-fit: cover;" alt="AI">
+                                    <div class="small fw-bold mt-1">Smart AI</div>
+                                </a>
+                            </div>
+                            <div class="col-6 text-center p-2 border rounded">
+                                <a href="https://pawarta.github.io/tools/quran/index.html" target="_blank" rel="noopener noreferrer" class="text-decoration-none text-dark">
+                                    <img src="https://pawarta.github.io/img/quran.png" style="width: 40px; height: 40px;" alt="Quran">
+                                    <div class="small fw-bold mt-1">Religi</div>
+                                </a>
+                            </div>
+                            <div class="col-6 text-center p-2 border rounded">
+                                <a href="https://pawarta.github.io/tools/qr/index.html" target="_blank" rel="noopener noreferrer" class="text-decoration-none text-dark">
+                                    <img src="https://pawarta.github.io/img/qr.png" style="width: 40px; height: 40px;" alt="QR">
+                                    <div class="small fw-bold mt-1">QR Scanner</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Widget Iklan / AdSense Placeholder -->
+                <div class="card shadow-sm border-0 mb-4 rounded-4 text-center p-3 bg-light">
+                    <div class="small text-muted mb-2">--- Ruang Iklan / Google AdSense ---</div>
+                    <ins class="adsbygoogle"
+                         style="display:block"
+                         data-ad-client="ca-pub-9308517202792186"
+                         data-ad-slot="auto"
+                         data-ad-format="auto"
+                         data-full-width-responsive="true"></ins>
+                    <script>
+                         (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
+
+                <!-- Navigasi kaca pendukung & Tools -->
+                <div class="card shadow-sm border-0 rounded-4 mb-4">
+                    <div class="card-header bg-dark text-white fw-bold">
+                        <i class="bi bi-link-45deg"></i> Pranala Penting
+                    </div>
+                    <div class="list-group list-group-flush rounded-bottom">
+                        <a href="https://pawarta.github.io/" target="_blank" rel="noopener noreferrer" class="list-group-item list-group-item-action">Portal Utama (Home)</a>
+                        <a href="https://pawarta.github.io/about.html" target="_blank" rel="noopener noreferrer" class="list-group-item list-group-item-action">Babagan Kami (About)</a>
+                        <a href="https://pawarta.github.io/contact.html" target="_blank" rel="noopener noreferrer" class="list-group-item list-group-item-action">Hubungi Kami (Contact)</a>
+                        <a href="https://pawarta.github.io/privacy.html" target="_blank" rel="noopener noreferrer" class="list-group-item list-group-item-action">Kebijakan Privasi (Privacy)</a>
+                        <a href="https://pawarta.github.io/terms.html" target="_blank" rel="noopener noreferrer" class="list-group-item list-group-item-action">Syarat & Ketentuan (Terms)</a>
+                        <a href="https://pawarta.github.io/disclaimer.html" target="_blank" rel="noopener noreferrer" class="list-group-item list-group-item-action">Penyangkalan (Disclaimer)</a>
+                        <a href="https://pawarta.github.io/license.html" target="_blank" rel="noopener noreferrer" class="list-group-item list-group-item-action">Lisensi (License)</a>
+                        <a href="https://pawarta.github.io/LICENSE" target="_blank" rel="noopener noreferrer" class="list-group-item list-group-item-action">File LICENSE</a>
+                        <a href="https://pawarta.github.io/gdpr.html" target="_blank" rel="noopener noreferrer" class="list-group-item list-group-item-action">Kepatuhan GDPR</a>
+                        <a href="https://pawarta.github.io/choices.html" target="_blank" rel="noopener noreferrer" class="list-group-item list-group-item-action">Pilihan Pengguna</a>
+                        <a href="https://pawarta.github.io/sitemap.html" target="_blank" rel="noopener noreferrer" class="list-group-item list-group-item-action">Sitemap Website</a>
+                    </div>
+                </div>
+
+                <!-- Tools & Utilities -->
+                <div class="card shadow-sm border-0 rounded-4">
+                    <div class="card-header rainbow-badge text-white fw-bold">
+                        <i class="bi bi-tools"></i> Pilihan Tools & Layanan
+                    </div>
+                    <div class="list-group list-group-flush rounded-bottom small">
+                        <a href="https://pawarta.github.io/tools/3d/index.html" target="_blank" rel="noopener noreferrer" class="list-group-item list-group-item-action">3D Viewer Tool</a>
+                        <a href="https://pawarta.github.io/tools/IP/index.html" target="_blank" rel="noopener noreferrer" class="list-group-item list-group-item-action">IP Lookup Tool</a>
+                        <a href="https://pawarta.github.io/tools/ai/index.html" target="_blank" rel="noopener noreferrer" class="list-group-item list-group-item-action">AI Assistant Tool</a>
+                        <a href="https://pawarta.github.io/tools/bahasa-jawa/index.html" target="_blank" rel="noopener noreferrer" class="list-group-item list-group-item-action">Penerjemah Bahasa Jawa</a>
+                        <a href="https://pawarta.github.io/tools/calendar/index.html" target="_blank" rel="noopener noreferrer" class="list-group-item list-group-item-action">Kalender Jawa / Weton</a>
+                        <a href="https://pawarta.github.io/tools/macapat/index.html" target="_blank" rel="noopener noreferrer" class="list-group-item list-group-item-action">Tembang Macapat</a>
+                        <a href="https://pawarta.github.io/tools/maps/index.html" target="_blank" rel="noopener noreferrer" class="list-group-item list-group-item-action">Peta Lokasi</a>
+                        <a href="https://pawarta.github.io/tools/qr/index.html" target="_blank" rel="noopener noreferrer" class="list-group-item list-group-item-action">QR Code Generator/Scanner</a>
+                        <a href="https://pawarta.github.io/tools/quran/index.html" target="_blank" rel="noopener noreferrer" class="list-group-item list-group-item-action">Al-Quran Digital</a>
+                        <a href="https://pawarta.github.io/tools/search/index.html" target="_blank" rel="noopener noreferrer" class="list-group-item list-group-item-action">Pencarian Lanjutan</a>
+                        <a href="https://pawarta.github.io/tools/tts/index.html" target="_blank" rel="noopener noreferrer" class="list-group-item list-group-item-action">Text-to-Speech (TTS)</a>
+                        <a href="https://pawarta.github.io/tools/voice/index.html" target="_blank" rel="noopener noreferrer" class="list-group-item list-group-item-action">Voice Recognition</a>
+                        <a href="https://pawarta.github.io/tools/wa/index.html" target="_blank" rel="noopener noreferrer" class="list-group-item list-group-item-action">WhatsApp Direct Tool</a>
+                        <a href="https://pawarta.github.io/tools/wayang/index.html" target="_blank" rel="noopener noreferrer" class="list-group-item list-group-item-action">Katalog Wayang Kulit</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    
+                <!-- News Update / Arsip Widget -->
+                <div class="sidebar-widget">
+                    <h5 class="font-heading fw-bold text-java-maroon mb-3 border-bottom pb-2"><i class="fas fa-archive text-warning me-2"></i>Arsip Warta</h5>
+                    <ul class="list-unstyled mb-0 small">
+                        <li class="py-2 border-bottom d-flex justify-content-between align-items-center"><a href="#" class="text-decoration-none text-dark">Oktober 2026</a> <span class="badge bg-secondary">142</span></li>
+                        <li class="py-2 border-bottom d-flex justify-content-between align-items-center"><a href="#" class="text-decoration-none text-dark">September 2026</a> <span class="badge bg-secondary">128</span></li>
+                        <li class="py-2 border-bottom d-flex justify-content-between align-items-center"><a href="#" class="text-decoration-none text-dark">Agustus 2026</a> <span class="badge bg-secondary">95</span></li>
+                        <li class="py-2 d-flex justify-content-between align-items-center"><a href="#" class="text-decoration-none text-dark">Juli 2026</a> <span class="badge bg-secondary">110</span></li>
+                    </ul>
+                </div>
+
+                <!-- Interactive Contact Form Widget -->
+                <div class="sidebar-widget" id="kontak">
+                    <h5 class="font-heading fw-bold text-java-maroon mb-3 border-bottom pb-2"><i class="fas fa-paper-plane text-success me-2"></i>Kirim Saran / Warta</h5>
+                    <form onsubmit="submitForm(event)">
+                        <div class="mb-3">
+                            <label class="form-label small fw-bold">Asma Panjenengan</label>
+                            <input type="text" class="form-control form-control-sm" required placeholder="Sartono...">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label small fw-bold">Serat Elektronik (Email)</label>
+                            <input type="email" class="form-control form-control-sm" required placeholder="sartono@mail.com">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label small fw-bold">Pesen / Pawarta</label>
+                            <textarea class="form-control form-control-sm" rows="3" required placeholder="Tulis pesen panjenengan wonten mriki..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-java-gold btn-sm w-100 fw-bold">Kirim Pesen</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-java-brown text-white pt-5 pb-3 mt-5 border-top border-warning">
+        <div class="container">
+            <div class="row g-4 mb-4">
+                <div class="col-lg-4">
+                    <div class="d-flex align-items-center gap-2 mb-3">
+                        <img src="https://placehold.co/40x40/D4AF37/3E2723?text=P" alt="Logo" class="rounded-circle">
+                        <span class="font-heading fs-3 text-java-gold">PAWARTA</span>
+                    </div>
+                    <p class="small text-white-50">
+                        Portal warta dhasar budaya, sastra, lan kabar aktual tanah Jawa. Melayani informasi terpercaya dengan menjunjung tinggi etika jurnalistik dan nilai luhur nusantara.
+                    </p>
+                    <div class="d-flex gap-3 mt-3">
+                        <a href="#" class="text-java-gold fs-5"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-java-gold fs-5"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-java-gold fs-5"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="text-java-gold fs-5"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <h6 class="text-java-gold font-heading fw-bold mb-3">Kategori Warta</h6>
+                    <ul class="list-unstyled small d-flex flex-column gap-2">
+                        <li><a href="#" class="text-decoration-none text-white-50 hover-gold">Nusantara</a></li>
+                        <li><a href="#" class="text-decoration-none text-white-50">Pariwisata</a></li>
+                        <li><a href="#" class="text-decoration-none text-white-50">Pendidikan</a></li>
+                        <li><a href="#" class="text-decoration-none text-white-50">Teknologi</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <h6 class="text-java-gold font-heading fw-bold mb-3">Budaya & Sastra</h6>
+                    <ul class="list-unstyled small d-flex flex-column gap-2">
+                        <li><a href="#" class="text-decoration-none text-white-50">Wayang Kulit</a></li>
+                        <li><a href="#" class="text-decoration-none text-white-50">Tembang Macapat</a></li>
+                        <li><a href="#" class="text-decoration-none text-white-50">Aksara Jawa</a></li>
+                        <li><a href="#" class="text-decoration-none text-white-50">Filsafat Jawi</a></li>
+                    </ul>
+                </div>
+                <div class="container text-center text-md-start">
+                <div class="row">
+                <div class="col-md-4 mb-4">
+                <h5 class="text-white fw-bold mb-3"><span class="rainbow-text">PAWARTA</span></h5>
+                <p class="small text-secondary">Portal warta digital inovatif kang nyawijiake kabudayan Jawi, aksara Honocoroko, lan teknologi informasi modheren ing donya maya.</p>
+                <div class="fs-4 text-warning">
+                ꦫꦲꦪꦸ ꦫꦲꦪꦸ ꦫꦲꦪꦸ
+                </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                <h6 class="text-white fw-bold mb-3">Pranala Kaca</h6>
+                <ul class="list-unstyled small">
+                <li><a href="https://pawarta.github.io/index.html" target="_blank" rel="noopener noreferrer">Beranda / Index</a></li>
+                <li><a href="https://pawarta.github.io/about.html" target="_blank" rel="noopener noreferrer">Tentang Kami</a></li>
+                <li><a href="https://pawarta.github.io/contact.html" target="_blank" rel="noopener noreferrer">Kontak</a></li>
+                <li><a href="https://pawarta.github.io/privacy.html" target="_blank" rel="noopener noreferrer">Kebijakan Privasi</a></li>
+                <li><a href="https://pawarta.github.io/terms.html" target="_blank" rel="noopener noreferrer">Syarat & Ketentuan</a></li>
+                </ul>
+                </div
+                <div class="col-lg-4">
+                    <h6 class="text-java-gold font-heading fw-bold mb-3">Warta Langganan (Newsletter)</h6>
+                    <p class="small text-white-50">Kintunaken email panjenengan kanggé langganan warta pilihan saben minggu.</p>
+                    <div class="input-group mb-3">
+                        <input type="email" class="form-control" placeholder="Email panjenengan...">
+                        <button class="btn btn-java-gold" type="button" onclick="subscribeNewsletter()">Langganan</button>
+                    </div>
+                </div>
+            </div>
+            <div class="border-top border-secondary pt-3 text-center small text-white-50">
+                <p class="mb-0">&copy; 2026 PAWARTA (pawarta.github.io). Hak cipta kinarya perlindungan kebudayaan nusantara.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Search Modal -->
+    <div class="modal fade" id="searchModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-java-maroon text-white border-warning">
+                <div class="modal-header border-bottom border-secondary">
+                    <h5 class="modal-title font-heading text-java-gold">Pados Warta</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Tulis kata kunci warta utawi budaya...">
+                        <button class="btn btn-java-gold" type="button"><i class="fas fa-search"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Custom Success Message Modal -->
+    <div class="modal fade" id="msgModal" tabindex="-1">
+        <div class="modal-dialog modal-sm modal-dialog-centered">
+            <div class="modal-content text-center p-4">
+                <i class="fas fa-check-circle text-success fa-3x mb-3"></i>
+                <h5 class="fw-bold font-heading mb-2">Matur Nuwun!</h5>
+                <p class="small text-muted mb-3" id="modalMsgContent">Pesen panjenengan sampun katampi.</p>
+                <button type="button" class="btn btn-sm btn-java-gold" data-bs-dismiss="modal">Tutup</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS & AOS Animation Script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+
+        function acceptCookies() {
+            document.getElementById('cookieBanner').style.display = 'none';
+            localStorage.setItem('pawarta_cookie', 'accepted');
+        }
+
+        function rejectCookies() {
+            document.getElementById('cookieBanner').style.display = 'none';
+            localStorage.setItem('pawarta_cookie', 'rejected');
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            if(localStorage.getItem('pawarta_cookie')) {
+                document.getElementById('cookieBanner').style.display = 'none';
+            }
+        });
+
+        function submitForm(e) {
+            e.preventDefault();
+            document.getElementById('modalMsgContent').innerText = "Pesen lan saran panjenengan sampun kasil kasimpen. Matur nuwun!";
+            var myModal = new bootstrap.Modal(document.getElementById('msgModal'));
+            myModal.show();
+            e.target.reset();
+        }
+
+        function subscribeNewsletter() {
+            document.getElementById('modalMsgContent').innerText = "Matur nuwun sampun langganan warta PAWARTA!";
+            var myModal = new bootstrap.Modal(document.getElementById('msgModal'));
+            myModal.show();
+        }
+    </script>
+</body>
+</html>

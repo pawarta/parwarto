@@ -1,0 +1,59 @@
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 20px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+
+  <h1>Klik Tombol untuk Dapatkan Link Acak!</h1>
+  <button onclick="redirectRandomLink()">Dapatkan Link Acak</button>
+
+  <script>
+    function redirectRandomLink() {
+      // Daftar URL yang akan dipilih secara acak
+      const links = [
+        "https://sfile.mobi/KolCjNp0mFV",
+        "https://sfile.mobi/H4KW6YZBFXp",
+        "https://sfile.mobi/4F2tQE4OwNA",
+        "https://sfile.mobi/wp8ZDWX75u7",
+        "https://sfile.mobi/6W1K2vxdlKv",
+        "https://sfile.mobi/9jLLlTzEKkA",
+        "https://sfile.mobi/9P68WXNmEzK",
+        "https://sfile.mobi/68RlSFIb11y",
+        "https://sfile.mobi/3PXIk7F8H6v",
+        "https://sfile.mobi/fYk5h1ZdhIh",
+        "https://sfile.mobi/aD1M4p4iHYd",
+        "https://sfile.mobi/bOS6tPCS087",
+        "https://sfile.mobi/4ujauwjm6sZ",
+        "https://sfile.mobi/2TjYkC9zfiR",
+        "https://sfile.mobi/9IBpNpq5lCE",
+        "https://sfile.mobi/aNQRGYA17aW",
+        "https://sfile.mobi/9nWEuABcS4v",
+        "https://sfile.mobi/6IIsJm7gXiS",
+        "https://sfile.mobi/MaKkanWgvTh",
+        "https://sfile.mobi/cOsRaslfOpP",
+        "https://sfile.mobi/invite/358103"
+      ];
+
+      // Pilih link secara acak
+      const randomIndex = Math.floor(Math.random() * links.length);
+
+      // Arahkan pengguna ke link yang dipilih
+      window.location.href = links[randomIndex];
+    }
+  </script>
+

@@ -1,0 +1,3 @@
+[build]
+  command = "python3 generate_blog.py --out dist --copy-static"
+  publish = "dist"

@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Al-Qur'an Digital Web Online - PAWARTA Murottal 30 Juz Premium</title>
+    
+    <!-- Meta SEO & Verifikasi -->
+    <meta name="google-site-verification" content="IAcn_DcNzAkFuMAjiMDNMoUEMZV5oKau1XrJ4aDJlRc" />
+    <meta name="msvalidate.01" content="E9411F953448412F854C1FBA584B1383" />
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="Al-Qur'an Digital Online Lengkap 30 Juz dengan Murottal Audio Qari Internasional, Terjemahan Bahasa Indonesia, Jawa, Inggris, serta nuansa budaya Jawa Honocoroko.">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="Al-Qur'an Digital Murottal 30 Juz Premium - PAWARTA">
+    <meta property="og:description" content="Pusat Al-Qur'an Digital online lengkap dengan audio qari, terjemahan bahasa Jawa, Indonesia, dan Inggris.">
+    <meta property="og:image" content="https://pawarta.github.io/img/quran.png">
+    <meta property="og:url" content="https://pawarta.github.io/tools/quran/index.html">
+    <meta property="og:type" content="website">
+
+    <!-- Favicon & Icons -->
+    <link rel="icon" href="https://pawarta.github.io/pawarta.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="https://pawarta.github.io/pawarta.ico" type="image/x-icon">
+    <link rel="icon" href="https://pawarta.github.io/pawarta.jpg" type="image/jpg">
+    <link rel="icon" href="https://pawarta.github.io/pawarta.png" type="image/png">
+    <link rel="apple-touch-icon" href="https://pawarta.github.io/pawarta.png">
+
+    <!-- Canonical & Alternate Links -->
+    <link rel="canonical" href="https://pawarta.github.io/tools/quran/index.html">
+    <link rel="alternate" href="https://pawarta.github.io/en-us/" hreflang="en-us" />
+    <link rel="alternate" href="https://pawarta.github.io/id/" hreflang="id" />
+    <link rel="alternate" href="https://pawarta.github.io/" hreflang="x-default" />
+
+    <!-- CSS Dependencies -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    
+    <!-- Google Fonts untuk Kaligrafi & Jawa -->
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Scheherazade+New:wght@400;700&family=Lateef&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Google AdSense & AMP Auto Ads -->
+    <script async custom-element="amp-auto-ads" src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js"></script>
+    <script async crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9308517202792186"></script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GN5PGKKM3T"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-GN5PGKKM3T');
+    </script>
+
+    <style>
+        /* CSS Animated Rainbow Color Pelangi */
+        @keyframes rainbowBackground {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .rainbow-header {
+            background: linear-gradient(270deg, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #8b00ff);
+            background-size: 1400% 1400%;
+            animation: rainbowBackground 15s ease infinite;
+            color: white;
+        }
+
+        .rainbow-text {
+            background: linear-gradient(270deg, #ff0000, #ff7f00, #0000ff, #8b00ff);
+            background-size: 400% 400%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: rainbowBackground 8s ease infinite;
+            font-weight: bold;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+
+        /* Nuansa Jawa & Honocoroko Header */
+        .javanese-accent {
+            font-family: 'Georgia', serif;
+            letter-spacing: 1px;
+        }
+
+        .honocoroko-banner {
+            background: #2c3e50;
+            color: #f1c40f;
+            font-size: 1.1rem;
+            text-align: center;
+            padding: 8px;
+            letter-spacing: 2px;
+            border-bottom: 2px solid #e74c3c;
+        }
+
+        /* Kaligrafi Styles */
+        .font-amiri { font-family: 'Amiri', serif; }
+        .font-scheherazade { font-family: 'Scheherazade New', serif; }
+        .font-lateef { font-family: 'Lateef', serif; }
+
+        .arabic-text {
+            font-size: 2.2rem;
+            line-height: 2.5;
+            text-align: right;
+            direction: rtl;
+        }
+
+        .quran-page-card {
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+
+        /* Responsive Slider Styling */
+        .carousel-item img {
+            height: 300px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Baris Honocoroko Nuansa Jawa -->
+    <div class="honocoroko-banner shadow-sm">
+        ꦲꦤꦕꦫꦏ ꦢꦠꦭꦮꦪ ꦥꦝꦗꦪꦚ ꦩꦒꦧꦛꦔ (Pusat Digital Al-Qur'an Nuansa Jawi & Murottal Premium)
+    </div>
+
+    <!-- Header Pelangi PAWARTA -->
+    <header class="rainbow-header py-4 shadow text-center">
+        <div class="container">
+            <img src="https://pawarta.github.io/pawarta.png" alt="Logo Pawarta" width="60" height="60" class="mb-2 rounded-circle bg-white p-1 shadow">
+            <h1 class="fw-bold m-0 display-6">AL-QUR'AN DIGITAL PAWARTA</h1>
+            <p class="lead m-0 mt-1">Murottal 30 Juz Premium • Mode Perhalaman & Multi-Bahasa</p>
+            <div id="realtime-clock" class="mt-2 fw-semibold javanese-accent"></div>
+        </div>
+    </header>
+
+    <!-- Navigation / Breadcrumb -->
+    <nav class="bg-white border-bottom py-2 shadow-sm">
+        <div class="container d-flex justify-content-between align-items-center flex-wrap">
+            <a href="https://pawarta.github.io/" class="text-decoration-none fw-bold text-dark"><i class="bi bi-house-door-fill"></i> PAWARTA Home</a>
+            <span class="text-muted small">Root: <code>https://pawarta.github.io/tools/quran/index.html</code></span>
+        </div>
+    </nav>
+
+    <!-- Main Content Container -->
+    <main class="container my-4">
+
+        <!-- Responsive Slider Section -->
+        <div id="pawartaSlider" class="carousel slide mb-5 shadow rounded overflow-hidden animate__animated animate__fadeIn" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#pawartaSlider" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#pawartaSlider" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#pawartaSlider" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://pawarta.github.io/img/quran.png" class="d-block w-100" alt="Al Quran Digital Pawarta">
+                    <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-2">
+                        <h5>Murottal 30 Juz Lengkap Tanpa Batas</h5>
+                        <p>Nikmati kemudahan membaca Al-Qur'an dengan audio qari internasional pilihan.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://pawarta.github.io/pawarta.jpg" class="d-block w-100" alt="Nuansa Budaya Jawa">
+                    <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-2">
+                        <h5>Kearifan Lokal Budaya Jawa</h5>
+                        <p>Dilengkapi terjemahan bahasa Jawa, Indonesia, serta Inggris secara interaktif.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://pawarta.github.io/pawarta bg.png" class="d-block w-100" alt="Teknologi Modern Responsive">
+                    <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-2">
+                        <h5>Akses Cepat & Responsif</h5>
+                        <p>Desain modern dengan animasi pelangi dan navigasi halaman standar mushaf (604 Halaman).</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#pawartaSlider" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Sadurunge</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#pawartaSlider" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Candhakipun</span>
+            </button>
+        </div>
+
+        <!-- Control Panel Tools Qari & Tampilan -->
+        <div class="row g-3 mb-4">
+            <!-- Pilih Qari -->
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm border-0">
+                    <div class="card-body">
+                        <label for="selectQari" class="form-label fw-bold text-primary"><i class="bi bi-mic-fill"></i> PILIH QARI (MUROTTAL AYAT):</label>
+                        <select id="selectQari" class="form-select">
+                            <option value="ar.alafasy">1. Mishary Rashid Alafasy (مشاري العفاسي)</option>
+                            <option value="ar.abdulrahmanalsudais">2. Abdul Rahman Al-Sudais (عبد الرحمن السديس)</option>
+                            <option value="ar.abdulbasit">3. Abdul Basit 'Abd us-Samad (عبد الباسط عبد الصمد)</option>
+                            <option value="ar.minshawi">4. Mohamed Siddiq El-Minshawi (محمد صديق المنشاوي)</option>
+                            <option value="ar.saudalsuraym">5. Saud Al-Shuraim (سعود الشريم)</option>
+                            <option value="ar.mahermuaiqly">6. Maher Al Mueaqly (ماهر المعيقلي)</option>
+                            <option value="ar.ahmedajamy">7. Ahmed Al-Ajamy (أحمد العجمي)</option>
+                            <option value="ar.hudhaify">8. Ali Al-Hudhaify (علي الحذيفي)</option>
+                            <option value="ar.muhammadjibreel">9. Muhammad Jibreel (محمد جبريل)</option>
+                            <option value="ar.sodes">10. Nasser Al Qatami (ناصر القطامي)</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Gaya Kaligrafi Arab -->
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm border-0">
+                    <div class="card-body">
+                        <label for="selectFont" class="form-label fw-bold text-success"><i class="bi bi-fonts"></i> GAYA KALIGRAFI ARAB:</label>
+                        <select id="selectFont" class="form-select" onchange="changeFontFamily(this.value)">
+                            <option value="font-amiri">1. Amiri (Klasik Standar)</option>
+                            <option value="font-scheherazade">2. Scheherazade New (Utsmani Tebal)</option>
+                            <option value="font-lateef">3. Lateef (Gaya Indo-Pak)</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mode Terjemahan -->
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm border-0">
+                    <div class="card-body">
+                        <label for="selectLang" class="form-label fw-bold text-warning text-dark"><i class="bi bi-translate"></i> PILIH BAHASA TERJEMAHAN:</label>
+                        <select id="selectLang" class="form-select" onchange="changeTranslation(this.value)">
+                            <option value="id">Bahasa Indonesia (Kemenag)</option>
+                            <option value="jv">Basa Jawa (Javanese)</option>
+                            <option value="en">English (Translation)</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mushaf Page Viewer Section -->
+        <div class="quran-page-card animate__animated animate__fadeInUp">
+            <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-2">
+                <h3 class="m-0 rainbow-text">AL-QUR'AN DIGITAL PER HALAMAN</h3>
+                <div>
+                    <button class="btn btn-outline-primary btn-sm" onclick="prevPage()"><i class="bi bi-chevron-left"></i> Sebelumnya</button>
+                    <span id="pageIndicator" class="mx-3 fw-bold">Halaman 1 / 604</span>
+                    <button class="btn btn-outline-primary btn-sm" onclick="nextPage()">Berikutnya <i class="bi bi-chevron-right"></i></button>
+                </div>
+            </div>
+
+            <hr>
+
+            <!-- Audio Player Widget -->
+            <div class="alert alert-secondary d-flex align-items-center justify-content-between flex-wrap" role="alert">
+                <div>
+                    <i class="bi bi-headphones fs-4 me-2"></i> <strong>Pemutar Audio Murottal:</strong> 
+                    <span id="audioInfo" class="ms-1">Memuat audio per ayat...</span>
+                </div>
+                <audio id="murottalAudio" controls class="mt-2 mt-md-0 w-100 w-md-auto" style="max-width: 300px;"></audio>
+            </div>
+
+            <!-- Container Ayat Al-Qur'an -->
+            <div id="quranContainer" class="my-4">
+                <div class="text-center py-5">
+                    <div class="spinner-border text-primary" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                    <p class="mt-2 text-muted">Sedang memuat data halaman Al-Qur'an...</p>
+                </div>
+            </div>
+
+            <!-- Bottom Pagination -->
+            <div class="d-flex justify-content-between align-items-center mt-4">
+                <button class="btn btn-primary btn-sm" onclick="prevPage()"><i class="bi bi-chevron-left"></i> Sebelumnya</button>
+                <span id="pageIndicatorBottom" class="fw-bold">Halaman 1 / 604</span>
+                <button class="btn btn-primary btn-sm" onclick="nextPage()">Berikutnya <i class="bi bi-chevron-right"></i></button>
+            </div>
+        </div>
+
+        <!-- Artikel Panjang Tutorial & Nuansa Jawa -->
+        <div class="card shadow-sm border-0 p-4 mb-5">
+            <h2 class="h4 mb-3 text-dark fw-bold"><i class="bi bi-journal-richtext text-danger"></i> Panduan Lengkap & Falsafah Al-Qur'an Digital PAWARTA</h2>
+            <p class="text-muted">
+                Wilujeng rawuh ing situs resmi <strong>PAWARTA</strong> (<a href="https://pawarta.github.io" class="text-decoration-none">https://pawarta.github.io</a>). Platform digital menika dipun rancang khusus kanggé nggampilaken umat Islam ing Nusantara puyeng maos, mirengaken murottal 30 juz, sarta mendhet hikmah saking terjemahan Basa Jawi, Indonesia, lan Inggris. Kanthi balutan teknologi responsif lan animasi pelangi CSS, para pamiarsa saged langkung krasan lan khusyuk.
+            </p>
+            <h5 class="fw-bold mt-3">Kaluwihan Fitur Tools Quran Pawarta:</h5>
+            <ul>
+                <li><strong>Murottal 30 Juz Premium:</strong> Pilihan Qari internasional lengkap saking Mishary Rashid Alafasy dumugi qari misuwur sanèsipun.</li>
+                <li><strong>Mode Perhalaman Standar Mushaf:</strong> Format konsisten sejumlah 604 halaman mempermudah pembacaan harian (Khatam Al-Quran).</li>
+                <li><strong>Nuansa Budaya Lokal:</strong> Integrasi aksara Jawa Honocoroko sarta terjemahan lokal kanggé nglestarikaken kabudayan tanpa nglirwakaken syariat.</li>
+                <li><strong>SEO & Monetisasi Optimal:</strong> Terintegrasi penuh dengan Google AdSense, meta OpenGraph, sarta sitemap berstandar internasional.</li>
+            </ul>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4 text-center">
+        <div class="container">
+            <p class="mb-1">&copy; 2026 <strong>PAWARTA</strong> - All Rights Reserved.</p>
+            <p class="small text-muted mb-0">
+                <a href="https://pawarta.github.io/about.html" class="text-decoration-none text-light me-2">Tentang</a> | 
+                <a href="https://pawarta.github.io/privacy.html" class="text-decoration-none text-light mx-2">Kebijakan Privasi</a> | 
+                <a href="https://pawarta.github.io/contact.html" class="text-decoration-none text-light ms-2">Kontak</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- JavaScript Bootstrap & Logika Quran API -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Realtime Clock Jawa & Indonesia
+        function updateClock() {
+            const now = new Date();
+            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit', timeZoneName: 'short' };
+            document.getElementById('realtime-clock').innerHTML = `<i class="bi bi-clock"></i> ${now.toLocaleDateString('id-ID', options)}`;
+        }
+        setInterval(updateClock, 1000);
+        updateClock();
+
+        // Quran Pagination & API Logic
+        let currentPage = 1;
+        const maxPages = 604;
+        let currentFontClass = 'font-amiri';
+        let currentLang = 'id';
+
+        async function fetchQuranPage(page) {
+            const container = document.getElementById('quranContainer');
+            container.innerHTML = `<div class="text-center py-5"><div class="spinner-border text-primary" role="status"></div><p class="mt-2 text-muted">Mbukak Halaman ${page}...</p></div>`;
+            
+            document.getElementById('pageIndicator').innerText = `Halaman ${page} / ${maxPages}`;
+            document.getElementById('pageIndicatorBottom').innerText = `Halaman ${page} / ${maxPages}`;
+
+            try {
+                // Menggunakan Al-Quran Cloud API untuk data per halaman dan terjemahan
+                let transEdition = currentLang === 'jv' ? 'id.indonesian' : (currentLang === 'en' ? 'en.sahih' : 'id.indonesian');
+                const response = await fetch(`https://api.alquran.cloud/v1/page/${page}/quran-uthmani`);
+                const data = await response.json();
+                
+                const transResponse = await fetch(`https://api.alquran.cloud/v1/page/${page}/${transEdition}`);
+                const transData = await transResponse.json();
+
+                if(data.code === 200 && transData.code === 200) {
+                    let htmlContent = '';
+                    const ayahs = data.data.ayahs;
+                    const transAyahs = transData.data.ayahs;
+
+                    let currentSurahName = '';
+
+                    for (let i = 0; i < ayahs.length; i++) {
+                        let ayah = ayahs[i];
+                        let trans = transAyahs[i];
+
+                        if (ayah.surah.englishName !== currentSurahName) {
+                            currentSurahName = ayah.surah.englishName;
+                            htmlContent += `
+                                <div class="alert alert-warning text-center fw-bold my-3 shadow-sm" role="alert">
+                                    Surah ${ayah.surah.englishName} (${ayah.surah.name}) - ${ayah.surah.englishNameTranslation} (Juz ${ayah.juz})
+                                </div>
+                            `;
+                        }
+
+                        htmlContent += `
+                            <div class="border-bottom py-3 ayah-item">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <span class="badge bg-secondary">Surah ${ayah.surah.number}, Ayat ${ayah.numberInSurah}</span>
+                                    <button class="btn btn-sm btn-outline-success" onclick="playAudio('${ayah.number}')">
+                                        <i class="bi bi-play-fill"></i> Putar Audio Ayat
+                                    </button>
+                                </div>
+                                <p class="arabic-text ${currentFontClass} text-dark mb-2">${ayah.text} <span class="badge bg-light text-dark border ms-2">(${ayah.numberInSurah})</span></p>
+                                <p class="text-muted small fst-italic m-0">${trans.text}</p>
+                            </div>
+                        `;
+                    }
+                    container.innerHTML = htmlContent;
+                } else {
+                    container.innerHTML = `<div class="alert alert-danger text-center">Gagal memuat data ayat Al-Qur'an. Mangga diambali malih.</div>`;
+                }
+            } catch (error) {
+                console.error(error);
+                container.innerHTML = `<div class="alert alert-danger text-center">Kesalahan jaringan koneksi internet.</div>`;
+            }
+        }
+
+        async function playAudio(ayahGlobalNumber) {
+            const qari = document.getElementById('selectQari').value;
+            const audioPlayer = document.getElementById('murottalAudio');
+            const audioInfo = document.getElementById('audioInfo');
+            
+            try {
+                const res = await fetch(`https://api.alquran.cloud/v1/ayah/${ayahGlobalNumber}/${qari}`);
+                const data = await res.json();
+                if(data.code === 200) {
+                    audioPlayer.src = data.data.audio;
+                    audioPlayer.play();
+                    audioInfo.innerText = `Memutar Ayat ${data.data.numberInSurah} (${data.data.surah.englishName}) - Qari terpilih`;
+                }
+            } catch(e) {
+                console.error(e);
+                audioInfo.innerText = "Gagal memutar audio.";
+            }
+        }
+
+        function nextPage() {
+            if (currentPage < maxPages) {
+                currentPage++;
+                fetchQuranPage(currentPage);
+                window.scrollTo({ top: 400, behavior: 'smooth' });
+            }
+        }
+
+        function prevPage() {
+            if (currentPage > 1) {
+                currentPage--;
+                fetchQuranPage(currentPage);
+                window.scrollTo({ top: 400, behavior: 'smooth' });
+            }
+        }
+
+        function changeFontFamily(fontClass) {
+            currentFontClass = fontClass;
+            const elements = document.querySelectorAll('.arabic-text');
+            elements.forEach(el => {
+                el.classList.remove('font-amiri', 'font-scheherazade', 'font-lateef');
+                el.classList.add(fontClass);
+            });
+        }
+
+        function changeTranslation(lang) {
+            currentLang = lang;
+            fetchQuranPage(currentPage);
+        }
+
+        // Inisialisasi Pertama
+        window.onload = function() {
+            fetchQuranPage(currentPage);
+        };
+    </script>
+</body>
+</html>

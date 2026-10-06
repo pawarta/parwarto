@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="jv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAWARTA - IP Lookup Tool & Informasi Alamat IP Jawi</title>
+    
+    <!-- Meta Tags & Verification -->
+    <meta name="google-site-verification" content="IAcn_DcNzAkFuMAjiMDNMoUEMZV5oKau1XrJ4aDJlRc" />
+    <meta name="msvalidate.01" content="E9411F953448412F854C1FBA584B1383" />
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="Piranti IP Lookup online resmi saking PAWARTA. Priksani alamat IP, lokasi, ISP, lan piranti jaringan kanthi nuansa kabudayan Jawa saha aksara Hanacaraka.">
+    <meta name="keywords" content="IP Lookup, Cek IP Address, Pawarta, Tools IP, Hanacaraka, Budaya Jawa">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="PAWARTA - IP Lookup Tool & Informasi Alamat IP">
+    <meta property="og:description" content="Piranti IP Lookup online kanthi nuansa Jawa lan pelangi pelangi animasi. Priksani IP address panjenengan kanthi gampil lan cepet.">
+    <meta property="og:image" content="https://pawarta.github.io/ip.png">
+    <meta property="og:url" content="https://pawarta.github.io/tools/IP/index.html">
+    <meta property="og:type" content="website">
+
+    <!-- Icons & Favicons -->
+    <link rel="icon" href="https://pawarta.github.io/pawarta.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="https://pawarta.github.io/pawarta.ico" type="image/x-icon">
+    <link rel="icon" href="https://pawarta.github.io/pawarta.jpg" type="image/x-icon">
+    <link rel="shortcut icon" href="https://pawarta.github.io/pawarta.png" type="image/x-icon">
+
+    <!-- Canonical & Alternate Links -->
+    <link rel="canonical" href="https://pawarta.github.io/tools/IP/index.html">
+    <link rel="alternate" href="https://pawarta.github.io/" hreflang="id" />
+    <link rel="alternate" href="https://pawarta.github.io/" hreflang="x-default" />
+
+    <!-- CSS Frameworks -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <!-- Google Adsense & Analytics -->
+    <script async custom-element="amp-auto-ads" src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js"></script>
+    <script async crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9308517202792186"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GN5PGKKM3T"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-GN5PGKKM3T');
+    </script>
+
+    <!-- Custom Animated Rainbow & Jawa Styling -->
+    <style>
+        @keyframes rainbowBackground {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .rainbow-header {
+            background: linear-gradient(270deg, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #8b00ff);
+            background-size: 1400% 1400%;
+            -webkit-animation: rainbowBackground 15s ease infinite;
+            animation: rainbowBackground 15s ease infinite;
+            color: #ffffff;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+        }
+
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        .javanese-font {
+            font-family: 'Georgia', serif;
+        }
+
+        .hanacaraka-title {
+            font-size: 1.8rem;
+            letter-spacing: 2px;
+            color: #d4af37;
+            text-shadow: 1px 1px 2px #000;
+        }
+
+        .navbar-brand img {
+            width: 45px;
+            height: 45px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 2px solid #fff;
+        }
+
+        .card-custom {
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+        }
+
+        .card-custom:hover {
+            transform: translateY(-5px);
+        }
+
+        .btn-rainbow {
+            background: linear-gradient(270deg, #ff0000, #ff7f00, #00ff00, #0000ff);
+            background-size: 400% 400%;
+            animation: rainbowBackground 8s ease infinite;
+            color: white;
+            border: none;
+            font-weight: bold;
+        }
+
+        .btn-rainbow:hover {
+            opacity: 0.9;
+            color: white;
+        }
+
+        footer {
+            background: #212529;
+            color: #adb5bd;
+        }
+
+        footer a {
+            color: #ffc107;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark rainbow-header sticky-top shadow">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="https://pawarta.github.io/">
+                <img src="https://pawarta.github.io/pawarta.jpg" alt="Logo Pawarta">
+                <div>
+                    <span class="fw-bold fs-4">PAWARTA</span>
+                    <div style="font-size: 0.75rem;" class="text-light">Warta & Piranti Digital Jawi</div>
+                </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                awaran<ul class="navbar-nav align-items-center gap-3">
+                    <li class="nav-item"><a class="nav-link text-white active" href="https://pawarta.github.io/index.html">Ngarep</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="https://pawarta.github.io/about.html">Babagan</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="https://pawarta.github.io/contact.html">Kontak</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="https://pawarta.github.io/sitemap.html">Peta Situs</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section / Slider Nuansa Jawa -->
+    <header class="rainbow-header py-5 text-center position-relative overflow-hidden">
+        <div class="container py-4 animate__animated animate__fadeInDown">
+            <h1 class="display-4 fw-bold">IP LOOKUP WEBSITE TOOLS</h1>
+            <div class="hanacaraka-title my-2">ꦲꦤꦕꦫꦏꦢꦠꦱꦮꦭꦥꦝꦗꦪꦚꦩꦒꦛꦔ</div>
+            <p class="lead mx-auto" style="max-width: 700px;">
+                Priksani katrangan lengkap alamat IP panjenengan kanthi gancang, akurat, sarta dipun balut nuansa budaya Jawi dening <strong>PAWARTA</strong>.
+            </p>
+            <a href="#tool-section" class="btn btn-light btn-lg mt-3 fw-bold text-dark px-4 shadow rounded-pill">Mulai Cek IP Sapunika</a>
+        </div>
+    </header>
+
+    <!-- Main Content & IP Lookup Tool -->
+    <main class="container my-5" id="tool-section">
+        
+        <!-- AdSense Slot Atas -->
+        <div class="text-center my-4">
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-9308517202792186"
+                 data-ad-slot="auto"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        </div>
+
+        <div class="row g-4">
+            <!-- Tool Box -->
+            <div class="col-lg-6">
+                <div class="card card-custom p-4 h-100 bg-white">
+                    <h3 class="card-title text-primary fw-bold mb-3"><i class="bi bi-hdd-network-fill me-2"></i>Piranti Priksa IP (IP Lookup)</h3>
+                    <p class="text-muted small">Ketik utawa priksa alamat IP publik panjenengan ing ngandhap punika kanthi otomatis.</p>
+                    
+                    <div class="input-group mb-3">
+                        <input type="text" id="ipInput" class="form-control" placeholder="Madosi Alamat IP...">
+                        <button class="btn btn-rainbow" type="button" id="lookupBtn">Priksa IP</button>
+                    </div>
+
+                    <div id="ipResult" class="bg-light p-3 rounded border mt-3" style="font-size: 0.95rem;">
+                        <div class="text-center text-muted py-3">Mawi sistem pangolahan data PAWARTA... Mangga antos sekedap.</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ilustrasi / Banner -->
+            <div class="col-lg-6">
+                <div class="card card-custom p-3 h-100 text-center bg-white d-flex align-items-center justify-content-center">
+                    <img src="https://pawarta.github.io/img/ip.png" alt="IP Lookup Illustration Pawarta" class="img-fluid rounded shadow-sm" style="max-height: 320px; object-fit: cover;">
+                    <div class="mt-3">
+                        <span class="badge bg-secondary">Aman & Terpercaya</span>
+                        <span class="badge bg-success">Real-time Data</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Artikel Panjang Bernuansa Jawa & Hanacaraka -->
+        <section class="row mt-5">
+            <div class="col-12">
+                <div class="card card-custom p-4 p-md-5 bg-white">
+                    <h2 class="text-dark fw-bold mb-3 border-bottom pb-2">Katrangan Jangkep Babagan Alamat IP & Teknologi Jaringan ing Era Digital</h2>
+                    <div class="hanacaraka-title mb-4" style="color: #4b0082; font-size: 1.4rem;">ꦱꦒꦺꦢ꧀ꦔꦼꦂꦠꦺꦱꦶꦥꦤꦶꦤ꧀ꦝꦶꦠ꧀ꦠꦶꦤꦶꦭꦸꦫꦸꦃ</div>
+                    
+                    <p class="text-secondary">
+                        Ing jaman globalisasi lan digitalisasi menika, Internet sampun dados sarana pokok kangge sesambetan manungsa saindenging jagad. Makaten ugi wonten ing tlatah Nusantara, mliginipun masyarakat Jawi, panganggé katrampilan digital sansaya tikel kathah. Ananging, kathah ingkang taksih dereng mangertos kados pundi piranti digital kados <strong>IP Address</strong> (Internet Protocol Address) punika makarya. Lewat platform <strong>PAWARTA</strong>, kita badhe medhar katrangan kanthi gamblang, nggabungaken antawisipun ngelmu teknologi jaringan komputer lan kearifan lokal budaya Jawi.
+                    </p>
+
+                    <h4 class="text-dark mt-4 fw-bold">1. Menapa Alamat IP (IP Address) Menika?</h4>
+                    <p class="text-secondary">
+                        Alamat IP menika deretan angka unik ingkang dipunparingaken dhateng saben piranti (kados ta komputer, smartphone, laptop, utawa router) ingkang sambung dhumateng jaringan internet. Kados déné alamat griya utawa pedukuhan wonten ing satunggaling désa, alamat IP njamin bilih data saking internet saking saged dumugi ing tujuannya tanpa lepat. Wonten kalih jinis alamat IP ingkang umum dipungunakaken, inggih menika <em>IPv4</em> (tuladhané: 192.168.1.1) lan <em>IPv6</em> ingkang langkung modern lan ageng kapasitasipun.
+                    </p>
+
+                    <h4 class="text-dark mt-4 fw-bold">2. Filosofi Jaringan Komputer lan Konsep "Papat Lima Pancer"</h4>
+                    <p class="text-secondary">
+                        Menawi kita sinau saking filsafat Jawi, sesambetan jaringan internet gadhah kekancan batin kaliyan konsep urip bebrayan. Konsep "Papat Lima Pancer" ingkang ngemot arah mata angin lan punjeripun (pusat) saged dipun analogiaken kaliyan arsitektur <em>Client-Server</em> ing jagad jaringan. Server dados punjer (pancer) ingkang mbagi data, dene piranti pangguna dados unsur pendukung ing sakiteripun. Kanthi piranti <strong>IP Lookup PAWARTA</strong>, panjenengan saged mangertos wonten pundi posisi geografis panjenengan adhedhasar titik koordinat jaringan internet.
+                    </p>
+
+                    <h4 class="text-dark mt-4 fw-bold">3. Wigatosipun Ngrumat Keamanan Siber (Cyber Security)</h4>
+                    <p class="text-secondary">
+                        Panganggé internet ingkang kirang tatas-titis saged mbebayani privasi pribadi. Kanthi piranti IP Lookup punika, panjenengan saged mriksa manawi alamat IP panjenengan aman, priksa ISP (Internet Service Provider) ingkang dipungunakaken, sarta mangertos piranti jaringan menapa kemawon ingkang kasambung. PAWARTA tansah setya nyaosaken warta lan piranti ingkang migunani, tansah njunjung tinggi nilai-nilai luhur budaya sarta katentreman digital.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- AdSense Slot Bawah -->
+        <div class="text-center my-4">
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-9308517202792186"
+                 data-ad-slot="auto"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        </div>
+
+    </main>
+
+    <!-- Footer / Panutup -->
+    <footer class="py-4 text-center border-top border-secondary">
+        <div class="container">
+            <div class="mb-2">
+                <span class="text-warning fw-bold">PAWARTA</span> — <em>Warta & Piranti Digital Jawi</em>
+            </div>
+            <div class="hanacaraka-title fs-6 text-light mb-3">ꦏꦧꦼꦢ꧀ꦢꦤ꧀ꦭꦤ꧀ꦠꦺꦏ꧀ꦤꦺꦴꦭꦺꦴꦒꦶ</div>
+            <div class="d-flex justify-content-center flex-wrap gap-3 small mb-3">
+                <a href="https://pawarta.github.io/about.html">Babagan</a>
+                <a href="https://pawarta.github.io/contact.html">Kontak</a>
+                <a href="https://pawarta.github.io/disclaimer.html">Disclaimer</a>
+                <a href="https://pawarta.github.io/privacy.html">Privacy Policy</a>
+                <a href="https://pawarta.github.io/terms.html">Terms</a>
+                <a href="https://pawarta.github.io/gdpr.html">GDPR</a>
+                <a href="https://pawarta.github.io/license.html">License</a>
+                <a href="https://pawarta.github.io/sitemap.html">Sitemap</a>
+            </div>
+            <p class="text-muted small mb-0">&copy; 2026 PAWARTA (pawarta.github.io). Sedaya Hak Cipta Dilindungi.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS & Custom IP Script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Fungsi Fetch IP Otomatis lan Lookup
+        async function fetchIpDetails(targetIp = '') {
+            const resultDiv = document.getElementById('ipResult');
+            resultDiv.innerHTML = `<div class="text-center text-primary py-3"><div class="spinner-border spinner-border-sm me-2" role="status"></div>Madosi data alamat IP...</div>`;
+            
+            try {
+                let url = 'https://ipapi.co/json/';
+                if(targetIp) {
+                    url = `https://ipapi.co/${targetIp}/json/`;
+                }
+                
+                let response = await fetch(url);
+                let data = await response.json();
+                
+                if(data.error) {
+                    resultDiv.innerHTML = `<div class="alert alert-danger mb-0">Maaf, alamat IP boten kapanggih utawa format luput.</div>`;
+                    return;
+                }
+
+                resultDiv.innerHTML = `
+                    <ul class="list-group list-group-flush bg-transparent">
+                        <li class="list-group-item bg-transparent d-flex justify-content-between"><strong>Alamat IP:</strong> <span class="text-primary fw-bold">${data.ip || '-'}</span></li>
+                        <li class="list-group-item bg-transparent d-flex justify-content-between"><strong>Kutha / Wilayah:</strong> <span>${data.city || '-'}, ${data.region || '-'}</span></li>
+                        <li class="list-group-item bg-transparent d-flex justify-content-between"><strong>Negari:</strong> <span>${data.country_name || '-'} (${data.country_code || '-'})</span></li>
+                        <li class="list-group-item bg-transparent d-flex justify-content-between"><strong>Pos / Zip:</strong> <span>${data.postal || '-'}</span></li>
+                        <li class="list-group-item bg-transparent d-flex justify-content-between"><strong>Koordinat (Lat/Lon):</strong> <span>${data.latitude || '-'}, ${data.longitude || '-'}</span></li>
+                        <li class="list-group-item bg-transparent d-flex justify-content-between"><strong>ISP / Jaringan:</strong> <span class="text-success fw-semibold">${data.org || '-'}</span></li>
+                        <li class="list-group-item bg-transparent d-flex justify-content-between"><strong>Zona Wektu:</strong> <span>${data.timezone || '-'}</span></li>
+                    </ul>
+                `;
+            } catch (error) {
+                resultDiv.innerHTML = `<div class="alert alert-warning mb-0">Gagal sambung dhumateng server IP API. Mangga diulangi malih.</div>`;
+            }
+        }
+
+        // Eksekusi nalika kaca kabuka
+        document.addEventListener("DOMContentLoaded", () => {
+            fetchIpDetails();
+
+            document.getElementById('lookupBtn').addEventListener('click', () => {
+                const ipVal = document.getElementById('ipInput').value.trim();
+                fetchIpDetails(ipVal);
+            });
+        });
+    </script>
+</body>
+</html>

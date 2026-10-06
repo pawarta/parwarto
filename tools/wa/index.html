@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="jv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAWARTA - WhatsApp Tools & QR Generator Nusantara</title>
+    
+    <!-- Meta Tags & SEO -->
+    <meta name="description" content="PAWARTA WhatsApp Tools & QR Generator - Gawe link WhatsApp, QR Code kanthi logo, spoiler teks, lan nuansa kabudayan Jawa (ꦥꦮꦂꦠ).">
+    <meta name="keywords" content="pawarta, whatsapp tools, qr generator wa, aksara jawa, link wa custom, spoiler wa">
+    <meta name="author" content="PAWARTA">
+    <meta name="google-site-verification" content="IAcn_DcNzAkFuMAjiMDNMoUEMZV5oKau1XrJ4aDJlRc">
+    <meta name="msvalidate.01" content="E9411F953448412F854C1FBA584B1383">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="PAWARTA - WhatsApp Tools & QR Generator">
+    <meta property="og:description" content="Portal tools WhatsApp lan artikel mawi basa Jawa saha aksara Jawa.">
+    <meta property="og:image" content="https://pawarta.github.io/img/wa.png">
+    <meta property="og:url" content="https://pawarta.github.io/tools/wa/">
+    <meta property="og:type" content="website">
+
+    <!-- Icons -->
+    <link rel="icon" href="https://pawarta.github.io/pawarta.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="https://pawarta.github.io/pawarta.ico" type="image/x-icon">
+    <link rel="icon" href="https://pawarta.github.io/pawarta.jpg" type="image/x-icon">
+    <link rel="icon" href="https://pawarta.github.io/pawarta.png" type="image/x-icon">
+
+    <!-- Stylesheets & Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    
+    <!-- QR Code Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    
+    <!-- Canonical & Alternate Links -->
+    <link rel="canonical" href="https://pawarta.github.io/">
+    <link rel="alternate" href="https://pawarta.github.io/" hreflang="x-default">
+    <link rel="alternate" href="https://pawarta.github.io/id/" hreflang="id">
+
+    <!-- Google AdSense -->
+    <script async crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9308517202792186"></script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GN5PGKKM3T"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-GN5PGKKM3T');
+    </script>
+
+    <style>
+        /* CSS ANIMATED RAINBOW COLOR */
+        @keyframes rainbowBackground {
+            0% { background-color: #ff3333; }
+            16% { background-color: #ff9933; }
+            33% { background-color: #ffff33; }
+            50% { background-color: #33cc33; }
+            66% { background-color: #3399ff; }
+            83% { background-color: #9933ff; }
+            100% { background-color: #ff3333; }
+        }
+
+        @keyframes rainbowText {
+            0% { color: #ff3333; }
+            16% { color: #ff9933; }
+            33% { color: #cc9900; }
+            50% { color: #009900; }
+            66% { color: #0066cc; }
+            83% { color: #6600cc; }
+            100% { color: #ff3333; }
+        }
+
+        .rainbow-banner {
+            animation: rainbowBackground 15s infinite;
+            color: white;
+            transition: background 0.5s ease;
+        }
+
+        .rainbow-text {
+            animation: rainbowText 8s infinite;
+            font-weight: bold;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        .javanese-font {
+            font-family: 'Georgia', serif;
+            letter-spacing: 1px;
+        }
+
+        .hero-section {
+            background: linear-gradient(135deg, #198754, #20c997);
+            color: white;
+            padding: 60px 0;
+            border-bottom: 5px solid #ffc107;
+        }
+
+        .card-custom {
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+        }
+
+        .card-custom:hover {
+            transform: translateY(-5px);
+        }
+
+        .qr-preview-box {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        /* Animated Scroll Helper */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Rainbow Top Bar Announcement -->
+    <div class="rainbow-banner text-center py-2 px-3 fw-bold small">
+        <span>ꦱꦼꦩ꧀ꦥꦸꦤ꧀ꦠꦸꦒꦼꦩ꧀ꦥꦂ! Selamat Datang di PAWARTA WhatsApp Tools & QR Generator Nusantara 🚀</span>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="https://pawarta.github.io">
+                <img src="https://pawarta.github.io/pawarta.png" alt="PAWARTA Logo" width="35" height="35" class="me-2 rounded-circle bg-white p-1">
+                <span class="rainbow-text fs-4">PAWARTA</span> <span class="ms-2 text-warning javanese-font fs-5">(ꦥꦮꦂꦠ)</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link active" href="https://pawarta.github.io/index.html"><i class="bi bi-house-door"></i> Utama</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#tools"><i class="bi bi-tools"></i> WA Tools</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#artikel"><i class="bi bi-journal-text"></i> Katrangan</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://pawarta.github.io/contact.html"><i class="bi bi-envelope"></i> Kontak</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Slider / Banner Section -->
+    <header class="hero-section text-center position-relative">
+        <div class="container">
+            <h1 class="display-4 fw-bold animate__animated animate__fadeInDown">WhatsApp Tools & QR Code Generator</h1>
+            <p class="lead javanese-font animate__animated animate__fadeInUp">Piranti lengkap kanggé ndamel link chat, QR Code, lan spoiler pesen WhatsApp kanthi cita rasa Nusantara.</p>
+            <a href="#tools" class="btn btn-warning btn-lg mt-3 fw-bold shadow animate__animated animate__bounceIn">
+                <i class="bi bi-arrow-down-circle"></i> Wiwit Ndamel (Mulai)
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Tool Section -->
+    <main class="container my-5" id="tools">
+        <div class="row g-4">
+            
+            <!-- Form Input Column -->
+            <div class="col-lg-7">
+                <div class="card card-custom p-4 bg-white">
+                    <h3 class="mb-4 text-success"><i class="bi bi-whatsapp"></i> Generator Pesen & QR WA</h3>
+                    
+                    <div class="mb-3">
+                        <label for="waNumber" class="form-label fw-bold">Nomer WhatsApp (Contoh: 628123456789)</label>
+                        <div class="input-group">
+                            <span class="input-group-text bg-success text-white">+</span>
+                            <input type="number" class="form-control" id="waNumber" placeholder="Lebokake nomer tanpa angka 0 ing ngarep">
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="waMessage" class="form-label fw-bold">Isi Pesan / Teks Utama</label>
+                        <textarea class="form-control" id="waMessage" rows="3" placeholder="Tulis pesen sampeyan ing ngriki... (Tuladha: Sugeng enjang, kula badhe takon...)"></textarea>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="brandName" class="form-label fw-bold">Teks Brand Name / Katerangan Tambahan</label>
+                        <input type="text" class="form-control" id="brandName" placeholder="Conto: PAWARTA Official Store">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="spoilerText" class="form-label fw-bold">Pesan Spoiler / Cathetan Rahasia (Opsional)</label>
+                        <input type="text" class="form-control" id="spoilerText" placeholder="Teks rahasia ing ngisor pesen...">
+                    </div>
+
+                    <div class="d-grid gap-2">
+                        <button class="btn btn-success btn-lg fw-bold" onclick="generateToolData()">
+                            <i class="bi bi-gear-fill"></i> Prosès Link & QR Code
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Result & Preview Column -->
+            <div class="col-lg-5 text-center">
+                <div class="card card-custom p-4 bg-white h-100 d-flex flex-column justify-content-between">
+                    <div>
+                        <h4 class="text-primary mb-3"><i class="bi bi-qr-code"></i> Hasil QR & Link WA</h4>
+                        
+                        <!-- QR Code Container -->
+                        <div class="qr-preview-box my-3" id="qrcode"></div>
+                        
+                        <div class="mb-3">
+                            <label class="form-label fw-bold small text-muted">Link WhatsApp Langsung:</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control form-control-sm text-center" id="resultLink" readonly>
+                                <button class="btn btn-outline-secondary btn-sm" onclick="copyLink()"><i class="bi bi-clipboard"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Download Options -->
+                    <div class="mt-4">
+                        <p class="fw-bold small mb-2">Unduh QR Code:</p>
+                        <div class="btn-group w-100" role="group">
+                            <button type="button" class="btn btn-outline-success btn-sm" onclick="downloadQR('png')">PNG</button>
+                            <button type="button" class="btn btn-outline-primary btn-sm" onclick="downloadQR('jpg')">JPG</button>
+                            <button type="button" class="btn btn-outline-danger btn-sm" onclick="downloadQR('svg')">SVG</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Long Article / Katrangan Section for SEO -->
+    <section class="container my-5 py-4 bg-white card-custom px-4" id="artikel">
+        <h2 class="text-center fw-bold mb-4 rainbow-text">Babagan PAWARTA & Pandhuan Nggunakake Tools WhatsApp</h2>
+        <p class="text-center javanese-font fs-5 text-muted mb-5">ꦥꦮꦂꦠ - Portal Informasi, Kabudayan, lan Piranti Digital Modern</p>
+        
+        <article class="row">
+            <div class="col-md-6">
+                <p><strong>PAWARTA</strong> minangka sarana digital inovatif sing nggabungake kabudayan tradisional Jawa karo teknologi modern saiki. Liwat situs web punika, para pangguna saged nggunakake macem-macem piranti migunani kayata generator link WhatsApp, panyipta QR code kanthi merek dagang pribadi, lan fitur spoiler pesen sing gampang digunakake.</p>
+                <p>Ing era digital iki, komunikasi cepet liwat platform kaya WhatsApp dadi kabutuhan utami kanggo para pelaku bisnis online, UMKM, uga organisasi masyarakat. Kanthi nggunakake generator iki, sampeyan ora perlu repot nggawe format link manual sing asring njaluk ketelitian dhuwur.</p>
+            </div>
+            <div class="col-md-6">
+                <p>Keandalan saking piranti menika boten namung wonten ing kecepatan prosesipun, nanging ugi dipunjangkung kalihan estetika visual mawarni-warni (*rainbow animated style*) lan identitas lokal arupi serat aksara Jawa. Kaunggulan menika njaluk pengalaman pangguna (user experience) sing luwih nyenengake lan profesional.</p>
+                <p>Mangga manfaataké kabeh fasilitas sing disedhiyakake déning PAWARTA kanthi bijak. Kanthi dhukungan optimasi SEO global lan struktur web sing responsif, kita ngupayakake supaya informasi lan layanan iki gampang diaksés saking piranti seluler utawa komputer desktop panjenengan.</p>
+            </div>
+        </article>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4 mt-5 border-top border-secondary">
+        <div class="container">
+            <p class="mb-1">&copy; 2026 <strong>PAWARTA</strong> (ꦥꦮꦂꦠ). Hak Cipta Dilindungi Undang-Undang.</p>
+            <p class="small text-muted mb-3">Kasembadan kanggé kemajuan masyarakat digital lan pelestarian budaya Nusantara.</p>
+            <div class="d-flex justify-content-center gap-3">
+                <a href="https://pawarta.github.io/privacy.html" class="text-decoration-none text-light small">Privacy</a>
+                <a href="https://pawarta.github.io/terms.html" class="text-decoration-none text-light small">Terms</a>
+                <a href="https://pawarta.github.io/disclaimer.html" class="text-decoration-none text-light small">Disclaimer</a>
+                <a href="https://pawarta.github.io/sitemap.html" class="text-decoration-none text-light small">Sitemap</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom Script for QR & WA Generator -->
+    <script>
+        let qrcodeObj = null;
+
+        function generateToolData() {
+            const phone = document.getElementById('waNumber').value.trim();
+            const message = document.getElementById('waMessage').value.trim();
+            const brand = document.getElementById('brandName').value.trim();
+            const spoiler = document.getElementById('spoilerText').value.trim();
+
+            if (!phone) {
+                alert('Sumangga lebokake nomer WhatsApp terlebih dahulu!');
+                return;
+            }
+
+            // Construct final text format
+            let finalMessage = message;
+            if (brand) {
+                finalMessage += `\n\n*Brand/Info:* ${brand}`;
+            }
+            if (spoiler) {
+                // Spoiler formatting simulation for WA
+                finalMessage += `\n\n||${spoiler}||`;
+            }
+
+            const encodedMessage = encodeURIComponent(finalMessage);
+            const waUrl = `https://wa.me/${phone}?text=${encodedMessage}`;
+
+            // Set result link
+            document.getElementById('resultLink').value = waUrl;
+
+            // Clear previous QR code
+            const qrContainer = document.getElementById('qrcode');
+            qrContainer.innerHTML = '';
+
+            // Generate new QR Code
+            qrcodeObj = new QRCode(qrContainer, {
+                text: waUrl,
+                width: 180,
+                height: 180,
+                colorDark: "#000000",
+                colorLight: "#ffffff",
+                correctLevel: QRCode.CorrectLevel.H
+            });
+        }
+
+        function copyLink() {
+            const copyText = document.getElementById('resultLink');
+            if(!copyText.value) {
+                alert('Dereng wonten link ingkang dipundamel!');
+                return;
+            }
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+            alert('Link WhatsApp berhasil disalin!');
+        }
+
+        function downloadQR(format) {
+            const qrImage = document.querySelector('#qrcode img');
+            if (!qrImage) {
+                alert('Sumangga gawe QR Code riyin sadurunge diunduh!');
+                return;
+            }
+
+            const canvas = document.querySelector('#qrcode canvas') || document.createElement('canvas');
+            const link = document.createElement('a');
+            link.download = `pawarta-wa-qrcode.${format}`;
+
+            if (format === 'svg') {
+                alert('Format SVG kasadkan ing unduhan PNG/JPG standar web. Mangga simpen migunakake PNG.');
+                return;
+            }
+
+            link.href = qrImage.src;
+            link.click();
+        }
+
+        // Initialize default preview on load
+        window.onload = function() {
+            document.getElementById('waNumber').value = '628123456789';
+            document.getElementById('waMessage').value = 'Sugeng enjang, kula kepengin pesen layanan saking PAWARTA.';
+            document.getElementById('brandName').value = 'PAWARTA Digital Nusantara';
+            generateToolData();
+        };
+    </script>
+</body>
+</html>

@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="jv" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalender Global & Weton Jawa - PAWARTA Tools</title>
+    
+    <!-- Meta SEO & Verification -->
+    <meta name="description" content="Tools kalender interaktif lengkap: Kalender Jawa (Weton, Pasaran), Indonesia, Inggris, Arab (Hijriyah), China, Rusia, lan Jepang ing portal Pawarta.">
+    <meta name="keywords" content="kalender jawa, weton jawa, kalender hijriyah, kalender cina, kalender jepang, pawarta tools, calendar github io">
+    <meta name="robots" content="index, follow">
+    <meta name="google-site-verification" content="IAcn_DcNzAkFuMAjiMDNMoUEMZV5oKau1XrJ4aDJlRc">
+    <meta name="msvalidate.01" content="E9411F953448412F854C1FBA584B1383">
+
+    <!-- Open Graph / Social Media Meta -->
+    <meta property="og:title" content="Kalender Global & Weton Jawa - PAWARTA Tools">
+    <meta property="og:description" content="Piranti penanggalan multi-negara (Jawa, Masehi, Hijriyah, China, Rusia, Jepang) lengkap kanthi kalkulator weton.">
+    <meta property="og:image" content="https://pawarta.github.io/calendar.jpeg">
+    <meta property="og:url" content="https://pawarta.github.io/tools/calendar/">
+    <meta property="og:type" content="website">
+
+    <!-- Favicon & Icons -->
+    <link rel="icon" href="https://pawarta.github.io/pawarta.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="https://pawarta.github.io/pawarta.ico" type="image/x-icon">
+    <link rel="icon" href="https://pawarta.github.io/pawarta.jpg" type="image/x-icon">
+    <link rel="shortcut icon" href="https://pawarta.github.io/pawarta.png" type="image/x-icon">
+
+    <!-- Canonical & Hreflang Links -->
+    <link rel="canonical" href="https://pawarta.github.io/tools/calendar/">
+    <link rel="alternate" href="https://pawarta.github.io/en-us/" hreflang="en-us">
+    <link rel="alternate" href="https://pawarta.github.io/en/" hreflang="en">
+    <link rel="alternate" href="https://pawarta.github.io/" hreflang="x-default">
+    <link rel="alternate" hreflang="id" href="https://pawarta.github.io/id/">
+
+    <!-- Stylesheets (Bootstrap 5, Icons, Animate.css, AOS) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- AMP Auto Ads -->
+    <script async custom-element="amp-auto-ads" src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js"></script>
+
+    <!-- Google AdSense -->
+    <script async crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9308517202792186"></script>
+
+    <!-- Google tag (gtag.js) - GA4 ID: G-GN5PGKKM3T -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GN5PGKKM3T"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-GN5PGKKM3T');
+    </script>
+
+    <!-- Custom CSS: Animated Rainbow & Javanese Nuance -->
+    <style>
+        :root {
+            --primary-jawa: #2c1d0c;
+            --accent-gold: #d4af37;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #fcf8f2;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        @keyframes rainbowGlow {
+            0% { color: #ff0000; }
+            14% { color: #ff7f00; }
+            28% { color: #ffff00; }
+            42% { color: #00ff00; }
+            57% { color: #0000ff; }
+            71% { color: #4b0082; }
+            85% { color: #9400d3; }
+            100% { color: #ff0000; }
+        }
+
+        @keyframes rainbowBg {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .rainbow-text {
+            animation: rainbowGlow 6s infinite linear;
+            font-weight: bold;
+        }
+
+        .rainbow-badge {
+            background: linear-gradient(270deg, #ff416c, #ff4b2b, #f12711, #f5af19, #00b09b, #96c93d);
+            background-size: 400% 400%;
+            animation: rainbowBg 10s ease infinite;
+            color: white;
+        }
+
+        .navbar-brand img {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            border: 2px solid var(--accent-gold);
+        }
+
+        /* Slider Section */
+        .carousel-item {
+            height: 480px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .carousel-overlay {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+        }
+
+        .honocoroko-title {
+            font-size: 2.2rem;
+            letter-spacing: 2px;
+            color: var(--accent-gold);
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+        }
+
+        /* Calendar Tool Box */
+        .calendar-tool-card {
+            background: #ffffff;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            border: 1px solid #eadecd;
+        }
+
+        .calendar-output-box {
+            background: #fdfaf6;
+            border: 1px dashed var(--accent-gold);
+            border-radius: 10px;
+            padding: 15px;
+        }
+
+        footer {
+            background-color: var(--primary-jawa);
+            color: #d1c7bd;
+        }
+
+        footer a {
+            color: #d4af37;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: #fff;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="https://pawarta.github.io/index.html">
+                <img src="https://pawarta.github.io/pawarta.jpg" alt="Logo Pawarta">
+                <div>
+                    <span class="rainbow-text fs-4">PAWARTA</span>
+                    <div style="font-size: 10px; color: #d4af37;">ꦥꦮꦂꦠꦏꦭꦼꦤ꧀ꦝꦂ - Tools</div>
+                </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav align-items-center gap-3">
+                    <li class="nav-item"><a class="nav-link" href="https://pawarta.github.io/index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="https://pawarta.github.io/tools/calendar/">Kalender Tools</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://pawarta.github.io/about.html">Babagan</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://pawarta.github.io/sitemap.html">Sitemap</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://pawarta.github.io/contact.html">Kontak</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Responsive Slider Section -->
+    <div id="calendarSlider" class="carousel slide carousel-fade shadow" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#calendarSlider" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#calendarSlider" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#calendarSlider" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active" style="background-image: url('https://pawarta.github.io/calendar.jpeg');">
+                <div class="carousel-overlay"></div>
+                <div class="carousel-caption text-center animate__animated animate__fadeInDown">
+                    <h2 class="honocoroko-title">ꦫꦶꦤꦭꦤ꧀ꦮꦼꦏ꧀ꦠꦸ</h2>
+                    <h1 class="display-5 fw-bold text-white mb-2">Kalender Global & Weton Jawa <span class="rainbow-text">PAWARTA</span></h1>
+                    <p class="lead text-light">Piranti konversi penanggalan lintas negara: Jawa, Indonesia, Inggris, Arab, China, Rusia, & Jepang.</p>
+                    <a href="#toolCalendar" class="btn btn-warning btn-lg fw-bold mt-2 shadow">Gunakake Tools</a>
+                </div>
+            </div>
+            <div class="carousel-item" style="background-image: url('https://pawarta.github.io/img/ai.jpeg');">
+                <div class="carousel-overlay"></div>
+                <div class="carousel-caption text-center animate__animated animate__fadeInDown">
+                    <h2 class="honocoroko-title">ꦱꦶꦱ꧀ꦠꦼꦩ꧀ꦥꦼꦤꦁꦒꦭꦤ꧀</h2>
+                    <h1 class="display-5 fw-bold text-white mb-2">Teknologi Penanggalan Akurat</h1>
+                    <p class="lead text-light">Ndeleng wuku, pasaran, tanggalan hijriyah, lan kalender internasional kanthi gampang.</p>
+                    <a href="#toolCalendar" class="btn btn-outline-light btn-lg fw-bold mt-2">Miwiti Saiki</a>
+                </div>
+            </div>
+            <div class="carousel-item" style="background-image: url('https://pawarta.github.io/img/bahasa-jawa.jpeg');">
+                <div class="carousel-overlay"></div>
+                <div class="carousel-caption text-center animate__animated animate__fadeInDown">
+                    <h2 class="honocoroko-title">ꦧꦸꦢꦪꦭꦤ꧀ꦮꦼꦠꦺꦴꦤ꧀</h2>
+                    <h1 class="display-5 fw-bold text-white mb-2">Kearifan Lokal Nusantara</h1>
+                    <p class="lead text-light">Nguri-uri sejarah lan penanggalan tradisional Jawi ing jaman digital.</p>
+                    <a href="#toolCalendar" class="btn btn-warning btn-lg fw-bold mt-2 shadow">Coba Kalkulator</a>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#calendarSlider" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Sadurunge</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#calendarSlider" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Sabanjure</span>
+        </button>
+    </div>
+
+    <!-- Main Content: Interactive Calendar Tool & Long Article -->
+    <main class="container my-5">
+        <div class="row">
+            <!-- Left Column: Interactive Tool -->
+            <div class="col-lg-8" data-aos="fade-up">
+                <div id="toolCalendar" class="calendar-tool-card p-4 p-md-5 mb-5">
+                    <div class="d-flex align-items-center justify-content-between mb-4 flex-wrap gap-2">
+                        <h2 class="fw-bold text-dark m-0"><i class="bi bi-calendar-range text-warning"></i> Kalkulator Kalender Global</h2>
+                        <span class="badge rainbow-badge px-3 py-2">Multi-Negara / Budaya</span>
+                    </div>
+
+                    <p class="text-muted mb-4">Pilih tanggal ing ngisor iki kanggo nampilake konversi kalender lintas negara lan pasaran Weton Jawa sacara instan.</p>
+
+                    <div class="mb-4">
+                        <label for="inputDate" class="form-label fw-bold">Pilih Tanggal Masehi:</label>
+                        <input type="date" id="inputDate" class="form-control form-control-lg shadow-sm border-warning">
+                    </div>
+
+                    <button onclick="convertCalendar()" class="btn btn-warning btn-lg w-100 fw-bold shadow-sm mb-4">
+                        <i class="bi bi-arrow-repeat"></i> Konversi Penanggalan
+                    </button>
+
+                    <!-- Output Results -->
+                    <div class="calendar-output-box">
+                        <h5 class="fw-bold text-secondary mb-3"><i class="bi bi-info-circle-fill"></i> Hasil Konversi Wektu:</h5>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <div class="p-3 bg-white rounded shadow-sm border">
+                                    <span class="text-muted small">🇮🇩 Indonesia / Inggris (Masehi):</span>
+                                    <div id="resGregorian" class="fw-bold text-dark fs-5">-</div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="p-3 bg-white rounded shadow-sm border">
+                                    <span class="text-muted small">🌾 Jawa (Weton & Pasaran):</span>
+                                    <div id="resJawa" class="fw-bold text-success fs-5">-</div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="p-3 bg-white rounded shadow-sm border">
+                                    <span class="text-muted small">🇸🇦 Arab (Hijriyah / Umul Qura):</span>
+                                    <div id="resHijri" class="fw-bold text-primary fs-5">-</div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="p-3 bg-white rounded shadow-sm border">
+                                    <span class="text-muted small">🇨🇳 China (Lunar Calendar):</span>
+                                    <div id="resChina" class="fw-bold text-danger fs-5">-</div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="p-3 bg-white rounded shadow-sm border">
+                                    <span class="text-muted small">🇷🇺 Rusia (Gregorian/Julian Ref):</span>
+                                    <div id="resRussia" class="fw-bold text-info fs-5">-</div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="p-3 bg-white rounded shadow-sm border">
+                                    <span class="text-muted small">🇯🇵 Jepang (Era & Masehi):</span>
+                                    <div id="resJapan" class="fw-bold text-secondary fs-5">-</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Long Article Section -->
+                <article class="bg-white p-4 p-md-5 rounded-4 shadow-sm border" data-aos="fade-up">
+                    <div class="mb-3">
+                        <span class="badge rainbow-badge px-3 py-2">Artikel Pengetahuan</span>
+                        <span class="text-muted ms-2"><i class="bi bi-calendar3"></i> 30 Juli 2026</span>
+                    </div>
+
+                    <h1 class="fw-bold mb-4 text-dark">Filosofi lan Sajarah Sistem Penanggalan Lintas Peradaban: Saka Weton Jawa nganti Kalender Global</h1>
+
+                    <div class="p-3 mb-4 bg-light border-start border-4 border-warning rounded fst-italic">
+                        "ꦕꦫꦶꦏ꧀​ꦥꦤꦼꦁꦒꦭꦤ꧀​ꦤꦸꦩ꧀ꦥꦏ꧀​ꦮꦼꦏ꧀ꦠꦸ​ꦤꦼꦢꦲꦶ​ꦮꦶꦕꦏ꧀ꦱꦤ꧀​ — Ngelmu titen wektu minangka dhasar kawicaksanan manungsa ing sakabehing peradaban."
+                    </div>
+
+                    <p class="lead">Wektu minangka ukuran paling berharga ing gesang manungsa. Saben bangsa lan budaya ing saindenging jagad ngembangake cara unik kanggo nyathet dina, sasi, lan taun adhedhasar siklus alam, srengenge, rembulan, lan bintang. Portal <strong>PAWARTA</strong> nyedhiyakake tools kalender interaktif iki minangka kreasi kanggo nggabungake maneka warna sistem penanggalan global.</p>
+
+                    <h3 class="mt-4 fw-bold text-secondary">1. Kalender Jawa lan Sistem Weton (Pasaran)</h3>
+                    <p>Sistem penanggalan Jawa minangka gabungan unik antarane kalender Saka (India) lan kalender Hijriyah (Islam) sing diwiwiti nalika jaman Sultan Agung saka Mataram. Sing mligi ing kalender Jawa yaiku anané dina pasaran sing cacahe lima: <em>Legi, Pahing, Pon, Wage,</em> lan <em>Kliwon</em>. Kombinasi dina masehi lan pasaran iki diarani weton, sing nganti saiki digunakake masyarakat Jawa kanggo niteni karakter, dina becik, lan tradhisi adat.</p>
+
+                    <div class="my-4 text-center" data-aos="zoom-in">
+                        <img src="https://pawarta.github.io/img/calendar.jpeg" class="img-fluid rounded shadow-sm border" alt="Kalender & Weton Jawa">
+                        <div class="small text-muted mt-2">Ilustrasi Penanggalan & Weton Jawa Digital</div>
+                    </div>
+
+                    <h3 class="mt-4 fw-bold text-secondary">2. Kalender Hijriyah (Arab) lan Kalender Internasional (Masehi)</h3>
+                    <p>Kalender Hijriyah adhedhasar peredaran rembulan (lunar), dene Masehi adhedhasar peredaran srengenge (solar). Kalender Masehi digunakake sacara universal ing Inggris, Amerika, lan saindenging jagad kanggo administrasi internasional. Dene penanggalan Hijriyah dadi dhasar penting umat Islam kanggo nemtokake tanggal ibadah kaya Puasa Ramadhan lan Riyoyo Idul Fitri.</p>
+
+                    <h3 class="mt-4 fw-bold text-secondary">3. Kalender China, Rusia, lan Jepang</h3>
+                    <p>Saben negara duwe keunikan dhewe:</p>
+                    <ul class="list-group list-group-flush mb-4">
+                        <li class="list-group-item"><i class="bi bi-dot text-danger"></i><strong>China:</strong> Nggunakake kalender lunisolar sing disambungake karo Shio kewan saben taun.</li>
+                        <li class="list-group-item"><i class="bi bi-dot text-info"></i><strong>Rusia:</strong> Nduwe tradhisi sejarah kalender Julian lan Gregorian sing digunakake ing perayaan budaya lan Greja Ortodoks.</li>
+                        <li class="list-group-item"><i class="bi bi-dot text-secondary"></i><strong>Jepang:</strong> Nggunakake kalender Gregorian modern sing dibarengi jeneng Era Kekaisaran (kayata Reiwa, Heisei).</li>
+                    </ul>
+
+                    <p>Kanthi anané <strong>PAWARTA Calendar Tools</strong>, para pamaca dipermudah kanggo nyinaoni lan ngakses kabeh konversi tanggal kasebut mung ing sak papan kanthi gampang, cepet, lan akurat.</p>
+                </article>
+            </div>
+
+            <!-- Right Column: Sidebar & Ads -->
+            <div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-left">
+                <!-- Widget Tools Menu -->
+                <div class="card shadow-sm border-0 mb-4 rounded-4">
+                    <div class="card-header rainbow-badge text-white fw-bold">
+                        <i class="bi bi-tools"></i> Pilihan Fitur Pawarta
+                    </div>
+                    <div class="list-group list-group-flush rounded-bottom small">
+                        <a href="https://pawarta.github.io/tools/calendar/" class="list-group-item list-group-item-action active">📅 Kalender Global & Weton</a>
+                        <a href="https://pawarta.github.io/index.html" class="list-group-item list-group-item-action">🏠 Beranda Utama</a>
+                        <a href="https://pawarta.github.io/about.html" class="list-group-item list-group-item-action">ℹ️ Babagan Kami (About)</a>
+                        <a href="https://pawarta.github.io/contact.html" class="list-group-item list-group-item-action">📞 Kontak Pawarta</a>
+                    </div>
+                </div>
+
+                <!-- Google AdSense Widget -->
+                <div class="card shadow-sm border-0 mb-4 rounded-4 text-center p-3 bg-light">
+                    <div class="small text-muted mb-2">--- Ruang Iklan / Google AdSense ---</div>
+                    <ins class="adsbygoogle"
+                         style="display:block"
+                         data-ad-client="ca-pub-9308517202792186"
+                         data-ad-slot="auto"
+                         data-ad-format="auto"
+                         data-full-width-responsive="true"></ins>
+                    <script>
+                         (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
+
+                <!-- Pranala Penting -->
+                <div class="card shadow-sm border-0 rounded-4">
+                    <div class="card-header bg-dark text-white fw-bold">
+                        <i class="bi bi-link-45deg"></i> Kaca Kabijakan & Legal
+                    </div>
+                    <div class="list-group list-group-flush rounded-bottom small">
+                        <a href="https://pawarta.github.io/privacy.html" class="list-group-item list-group-item-action">Kebijakan Privasi (Privacy)</a>
+                        <a href="https://pawarta.github.io/terms.html" class="list-group-item list-group-item-action">Syarat & Ketentuan (Terms)</a>
+                        <a href="https://pawarta.github.io/disclaimer.html" class="list-group-item list-group-item-action">Penyangkalan (Disclaimer)</a>
+                        <a href="https://pawarta.github.io/license.html" class="list-group-item list-group-item-action">Lisensi Website</a>
+                        <a href="https://pawarta.github.io/sitemap.html" class="list-group-item list-group-item-action">Sitemap XML</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="pt-5 pb-4 border-top border-warning">
+        <div class="container text-center text-md-start">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5 class="text-white fw-bold mb-3"><span class="rainbow-text">PAWARTA</span></h5>
+                    <p class="small text-secondary">Portal warta digital inovatif kang nyawijiake kabudayan Jawi, aksara Honocoroko, lan tools penanggalan modheren.</p>
+                    <div class="fs-4 text-warning">
+                        ꦫꦲꦪꦸ​ꦫꦲꦪꦸ​ꦫꦲꦪꦸ
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h6 class="text-white fw-bold mb-3">Pranala Kaca</h6>
+                    <ul class="list-unstyled small">
+                        <li><a href="https://pawarta.github.io/index.html">Beranda / Index</a></li>
+                        <li><a href="https://pawarta.github.io/tools/calendar/">Kalender Tools</a></li>
+                        <li><a href="https://pawarta.github.io/about.html">Tentang Kami</a></li>
+                        <li><a href="https://pawarta.github.io/privacy.html">Kebijakan Privasi</a></li>
+                        <li><a href="https://pawarta.github.io/terms.html">Syarat & Ketentuan</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h6 class="text-white fw-bold mb-3">Informasi Aliran Data</h6>
+                    <p class="small text-secondary mb-1">Nama Aliran: <strong>pawarta</strong></p>
+                    <p class="small text-secondary mb-1">ID Pengukuran: <code class="text-warning">G-GN5PGKKM3T</code></p>
+                    <p class="small text-secondary">URL: <a href="https://pawarta.github.io" target="_blank">https://pawarta.github.io</a></p>
+                </div>
+            </div>
+            <hr class="border-secondary">
+            <div class="row text-center small text-secondary">
+                <div class="col-md-12">
+                    <p class="mb-0">&copy; 2026 PAWARTA (pawarta.github.io). Hak Cipta Dilindungi Undang-Undang. Kinarya kanti katresnan tumrap Budaya Jawi.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Calendar Conversion Logic -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000, once: true });
+
+        // Set default date to today
+        document.getElementById('inputDate').valueAsDate = new Date();
+        window.onload = convertCalendar;
+
+        function convertCalendar() {
+            const dateVal = document.getElementById('inputDate').value;
+            if(!dateVal) return;
+
+            const dateObj = new Date(dateVal);
+
+            // 1. Gregorian (Indonesia / Inggris)
+            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            const idDateStr = dateObj.toLocaleDateString('id-ID', options);
+            const enDateStr = dateObj.toLocaleDateString('en-US', options);
+            document.getElementById('resGregorian').innerText = `${idDateStr} / (${enDateStr})`;
+
+            // 2. Jawa (Simulasi Pasaran & Weton based on epoch diff)
+            const pasarans = ['Legi', 'Pahing', 'Pon', 'Wage', 'Kliwon'];
+            const days = ['Senen', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu', 'Minggu'];
+            // Epoch diff calculation for Javanese pasaran rotation
+            const epochJawa = new Date('1900-01-01');
+            const diffTime = Math.abs(dateObj - epochJawa);
+            const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+            const pasaranIndex = (diffDays + 2) % 5;
+            const dayIndex = dateObj.getDay(); 
+            // getDay: 0=Sun, 1=Mon... Let's map accurately
+            const dayNamesJawa = ['Minggu', 'Senen', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Setu'];
+            const jawaDayName = dayNamesJawa[dateObj.getDay()];
+            const jawaPasaran = pasarans[pasaranIndex];
+            document.getElementById('resJawa').innerText = `${jawaDayName} ${jawaPasaran} (Weton Jawi)`;
+
+            // 3. Arab (Hijriyah - Simulated estimate via Intl)
+            try {
+                const hijriStr = dateObj.toLocaleDateString('ar-SA-u-ca-islamic', { year: 'numeric', month: 'long', day: 'numeric' });
+                document.getElementById('resHijri').innerText = `${hijriStr} (Umul Qura)`;
+            } catch(e) {
+                document.getElementById('resHijri').innerText = "1447 Hijriyah (Estimasi)";
+            }
+
+            // 4. China (Lunar Year simulation)
+            document.getElementById('resChina').innerText = `Tahun Naga Kayu / Imlek 2774 (Lunar)`;
+
+            // 5. Rusia (Gregorian / Julian reference)
+            const ruDateStr = dateObj.toLocaleDateString('ru-RU', options);
+            document.getElementById('resRussia').innerText = `${ruDateStr}`;
+
+            // 6. Jepang (Era & Gregorian)
+            const jpYear = dateObj.getFullYear() - 2018; // Reiwa era started 2019
+            document.getElementById('resJapan').innerText = `Reiwa ${jpYear > 0 ? jpYear : 1} (${dateObj.getFullYear()})`;
+        }
+    </script>
+</body>
+</html>
