@@ -1,0 +1,6 @@
+runtime: python39
+
+# Mengarahkan seluruh lalu lintas domain .appspot.com ke aplikasi Flask kita
+handlers:
+- url: /.*
+  script: auto
